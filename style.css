@@ -1,0 +1,217 @@
+html,
+body {
+    font-family: 'Cabin', sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.separator {
+    width: 100%;
+    height: 1px;
+    background-color: #f2f2f2;
+    margin: 15px 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 120px;
+    position: relative;
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    color: #fff;
+}
+
+.header .overlay {
+    background-color: #004d98;
+    width: 100%;
+    height: 100%;
+    opacity: .90;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.header .header-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    font-size: 1.8rem;
+    margin: 0 0 -20px 0;
+}
+
+.header .header-logo {
+    width: 96px;
+    height: 96px;
+    margin: 0 20px 0 0;
+}
+
+.tier {
+    display: flex;
+}
+
+.tier.first {
+    margin: 40px 0 0 0;
+}
+
+.tier-labels {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 15%;
+}
+
+.tier-labels .tier-color {
+    width: 12px;
+    height: 12px;
+    margin: 0 15px 0 0;
+}
+
+.tier-labels .tier-title {
+    font-size: 1.4rem;
+}
+
+.tier-color-0 {
+    background-color: #12ff00;
+}
+
+.tier-color-1 {
+    background-color: #0dbc00;
+}
+
+.tier-color-2 {
+    background-color: #fffc00;
+}
+
+.tier-color-3 {
+    background-color: #ffba00;
+}
+
+.tier-color-4 {
+    background-color: #ff8039;
+}
+
+.tier-color-5 {
+    background-color: #ff0000;
+}
+
+.tier-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 85%;
+    padding: 0 2rem;
+}
+
+.tier-content .official {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: .5rem .5rem;
+    font-size: 1.1rem;
+}
+
+.tier-content .official-logo {
+    display: inline-block;
+    margin: 0 .5rem 0 0;
+    width: 24px;
+    height: 24px;
+}
+
+.tier-content .source {
+    margin: .5rem .5rem;
+}
+
+.tier-content .source.journalist {
+    color: #3f5d7a;
+}
+
+.tier-content .source.media {
+    color: #7a3f3f;
+    font-weight: bold;
+}
+
+.tier-content .source .workplace {
+    font-weight: bold;
+    color: #424242;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin: 20px 0 0 0;
+    color: #fff;
+    background-color: #a40243;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer .footer-logo {
+    display: inline-block;
+    margin: .5rem .5rem;
+    width: 24px;
+    height: 24px;
+}
+
+.footer .subreddit {
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.footer .last-update {
+    margin: 0 .5rem 0 0;
+}
+
+@media all and (max-width: 959px) {
+    .container {
+        width: 100%;
+    }
+
+    .tier {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tier .tier-labels {
+        width: 100%;
+        justify-content: center;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media all and (max-width: 530px) {
+    .header {
+        align-items: center;
+    }
+
+    .header .header-content {
+        margin: 0;
+        font-size: 1.4rem;
+    }
+
+    .header .header-logo {
+        width: 72px;
+        height: 72px;
+        margin: 0 10px 0 0;
+    }
+}
