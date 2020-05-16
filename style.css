@@ -4,6 +4,7 @@ body {
     font-size: 16px;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -197,6 +198,10 @@ body {
         justify-content: center;
         margin: 0 0 10px 0;
     }
+
+    .tier.first {
+        margin: 20px 0 0 0;
+    }
 }
 
 @media all and (max-width: 530px) {
@@ -210,8 +215,6 @@ body {
     }
 
     .header .header-logo {
-        width: 72px;
-        height: 72px;
-        margin: 0 10px 0 0;
+        display: none;
     }
 }
