@@ -65,3 +65,14 @@ sources.forEach(function (source) {
     }
     document.querySelector('.tier-' + source.tier + ' .tier-content').appendChild(element);
 });
+
+// Insert breaks before the start of each source of type media
+
+document.querySelectorAll('.tier-content').forEach(function (item) {
+    var element = item.querySelector('.media');
+    if (element) {
+        var newElement = document.createElement('div');
+        newElement.className = 'flex-break';
+        element.parentNode.insertBefore(newElement, element);
+    }
+});
