@@ -4,8 +4,6 @@ var sources = [
     { name: 'Alfredo Martínez', type: 'journalist', tier: 1, workplace: 'Onda Cero' },
     { name: 'Edu Polo', type: 'journalist', tier: 1, workplace: 'MD' },
     { name: 'Xavi Campos', type: 'journalist', tier: 1, workplace: 'CatRadio' },
-    { name: 'BBC Sport', type: 'media', tier: 1, workplace: null },
-    { name: 'TV3 Cat', type: 'media', tier: 1, workplace: null },
     // Tier 2
     { name: 'Bruno Alemany', type: 'journalist', tier: 2, workplace: 'Cadena SER' },
     { name: 'Fabrizio Romano', type: 'journalist', tier: 2, workplace: 'The Guardian' },
@@ -15,10 +13,12 @@ var sources = [
     { name: 'Marcelo Bechler', type: 'journalist', tier: 2, workplace: 'Esporte Interativo' },
     { name: 'Miguel Rico', type: 'journalist', tier: 2, workplace: 'MD' },
     { name: 'Oriol Domènech', type: 'journalist', tier: 2, workplace: 'CatRadio' },
-    { name: 'Raül Llimós', type: 'journalist', tier: 2, workplace: 'RAC1' },
     { name: 'Roger Arbusà', type: 'journalist', tier: 2, workplace: 'CatRadio' },
     { name: 'Roger Saperas', type: 'journalist', tier: 2, workplace: 'RAC1' },
     { name: 'Cadena SER', type: 'media', tier: 2, workplace: null },
+    { name: 'Catalunya Radio', type: 'media', tier: 2, workplace: null },
+    { name: 'RAC1', type: 'media', tier: 2, workplace: null },
+    { name: 'TV3 Cat', type: 'media', tier: 2, workplace: null },
     // Tier 3
     { name: 'Albert Rogé', type: 'journalist', tier: 3, workplace: 'Sport' },
     { name: 'Ferran Martínez', type: 'journalist', tier: 3, workplace: 'MD' },
@@ -30,10 +30,8 @@ var sources = [
     { name: 'Roger Torelló', type: 'journalist', tier: 3, workplace: 'MD' },
     { name: 'Sique Rodríguez', type: 'journalist', tier: 3, workplace: 'Cadena SER' },
     { name: 'Cadena COPE', type: 'media', tier: 3, workplace: null },
-    { name: 'Catalunya Radio', type: 'media', tier: 3, workplace: null },
     { name: 'Mundo Deportivo', type: 'media', tier: 3, workplace: null },
     { name: 'Onda Cero', type: 'media', tier: 3, workplace: null },
-    { name: 'RAC1', type: 'media', tier: 3, workplace: null },
     // Tier 4
     { name: 'Francesc Aguilar', type: 'journalist', tier: 4, workplace: 'MD' },
     { name: 'Guillem Balagué', type: 'journalist', tier: 4, workplace: 'Sky' },
