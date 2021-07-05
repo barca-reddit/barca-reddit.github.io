@@ -145,7 +145,8 @@ body {
     height: 24px;
 }
 
-.tier-content .source {
+.tier-content .source,
+.tier-content .tier-notes {
     margin: 0.5rem 0.5rem;
 }
 
