@@ -52,6 +52,7 @@ var sources = [
     { name: 'Daily Star', type: 'media', tier: 5 },
     { name: 'Diario Gol', type: 'media', tier: 5 },
     { name: 'Don Balon', type: 'media', tier: 5 },
+    { name: 'El Nacional', type: 'media', tier: 5 },
     { name: 'Express', type: 'media', tier: 5 },
     { name: 'L\'Equipe', type: 'media', tier: 5 },
     { name: 'The Sun', type: 'media', tier: 5 },
