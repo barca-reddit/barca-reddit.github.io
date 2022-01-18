@@ -128,7 +128,6 @@ document.querySelectorAll('.tier-content').forEach(node => {
         node.insertBefore(document.createRange().createContextualFragment('<div class="flex-break"></div>'), element);
     }
     else if (element && element.classList.contains('aggregator')) {
-        console.log(node);
         node.appendChild(document.createRange().createContextualFragment('<div class="flex-break"></div>'), element);
     }
 })
