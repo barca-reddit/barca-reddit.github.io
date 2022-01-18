@@ -18,9 +18,9 @@ body {
 
 .separator {
     width: 100%;
-    height: 5px;
+    height: 0.25rem;
     background-color: #f2f2f2;
-    margin: 15px 0;
+    margin: 1rem 0;
 }
 
 .flex-break {
@@ -35,7 +35,7 @@ body {
     justify-content: center;
     align-items: flex-end;
     width: 100%;
-    height: 120px;
+    height: 8rem;
     position: relative;
     background-image: url("img/bg.jpg");
     background-size: cover;
@@ -65,7 +65,7 @@ body {
 .header .header-logo {
     width: 96px;
     height: 96px;
-    margin: 0 20px 0 0;
+    margin: 0 1rem 0 0;
 }
 
 .tier {
@@ -73,7 +73,7 @@ body {
 }
 
 .tier.first {
-    margin: 40px 0 0 0;
+    margin: 3rem 0 0 0;
 }
 
 .tier-labels {
@@ -84,9 +84,10 @@ body {
 }
 
 .tier-labels .tier-color {
-    width: 12px;
-    height: 12px;
-    margin: 0 15px 0 0;
+    width: 1rem;
+    height: 1rem;
+    margin: 0 1rem 0 0;
+    border-radius: 0.1rem;
 }
 
 .tier-labels .tier-title {
@@ -130,12 +131,15 @@ body {
     padding: 0 2rem;
 }
 
+.tier-content a {
+    text-decoration: none;
+}
+
 .tier-content .official {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0.5rem 0.5rem;
-    font-size: 1.1rem;
 }
 
 .tier-content .official-logo {
@@ -147,11 +151,19 @@ body {
 
 .tier-content .source,
 .tier-content .tier-notes {
+    cursor: pointer;
     margin: 0.5rem 0.5rem;
+    user-select: none;
+    -moz-user-select: none;
 }
 
 .tier-content .source.journalist {
     color: #3f5d7a;
+}
+
+.tier-content .source.journalist:active {
+    color: rgba(62, 93, 121, 0.5);
+    box-shadow: 0 2px 0 0px rgba(62, 93, 121, 0.25);
 }
 
 .tier-content .source.media {
@@ -159,13 +171,28 @@ body {
     font-weight: bold;
 }
 
+.tier-content .source.media:active {
+    color: rgba(121, 62, 62, 0.5);
+    box-shadow: 0 2px 0 0px rgba(121, 62, 62, 0.25);
+}
+
 .tier-content .source.aggregator {
     color: #333;
 }
 
+.tier-content .source.aggregator:active {
+    color: rgba(51, 51, 51, 0.5);
+    box-shadow: 0 2px 0 0px rgba(51, 51, 51, 0.25);
+}
+
 .tier-content .source .workplace {
+    color: #333;
     font-weight: bold;
-    color: #424242;
+    font-size: 12px;
+}
+
+.tier-content .source:active .workplace {
+    color: rgba(51, 51, 51, 0.25);
 }
 
 .tier-content .tier-notes {
@@ -178,31 +205,29 @@ body {
     display: flex;
     align-items: center;
     height: 40px;
-    margin: 20px 0 0 0;
-    color: #fff;
-    background-color: #a40243;
+    margin: 0 0 1rem 0;
 }
 
 .footer a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
 }
 
-.footer .footer-logo {
-    display: inline-block;
-    margin: 0.5rem 0.5rem;
+.footer a:active {
+    color: rgba(51, 51, 51, 0.5);
+    box-shadow: 0 2px 0 0px rgba(51, 51, 51, 0.25);
+}
+
+.footer img {
     width: 24px;
     height: 24px;
+    margin: 0 0.25rem 0 0;
 }
 
 .footer .subreddit {
     display: flex;
     flex: 1;
     align-items: center;
-}
-
-.footer .last-update {
-    margin: 0 0.5rem 0 0;
 }
 
 @media all and (max-width: 959px) {
@@ -223,6 +248,15 @@ body {
 
     .tier.first {
         margin: 20px 0 0 0;
+    }
+
+    .tier .tier-content {
+        width: 95%;
+        padding: 0 2.5%;
+    }
+
+    .footer {
+        padding: 0 2.5%;
     }
 }
 
