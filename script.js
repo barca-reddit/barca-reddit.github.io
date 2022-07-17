@@ -8,6 +8,7 @@ const sources = [
     { name: 'Achraf Ben Ayad', type: 'journalist', tier: 1, workplace: 'beIN', link: 'Benayadachraf' },
     { name: 'Alfredo Martínez', type: 'journalist', tier: 1, workplace: 'Onda Cero', link: 'Alfremartinezz' },
     { name: 'Edu Polo', type: 'journalist', tier: 1, workplace: 'MD', link: 'EduPolo' },
+    { name: 'Gerard Romero', type: 'journalist', tier: 1, workplace: 'Jijantes FC', link: 'gerardromero' },
     { name: 'Xavi Campos', type: 'journalist', tier: 1, workplace: 'CatRadio', link: 'xavicampos' },
     // Tier 2
     { name: 'Adrià Albets', type: 'journalist', tier: 2, workplace: 'Cadena SER', link: 'AdriaAlbets' },
@@ -15,7 +16,6 @@ const sources = [
     { name: 'Fabrizio Romano', type: 'journalist', tier: 2, workplace: 'The Guardian', link: 'FabrizioRomano' },
     { name: 'Fernando Polo', type: 'journalist', tier: 2, workplace: 'MD', link: 'ffpolo' },
     { name: 'Ferran Martínez', type: 'journalist', tier: 2, workplace: 'MD', link: 'martinezferran' },
-    { name: 'Gerard Romero', type: 'journalist', tier: 2, workplace: 'Jijantes FC', link: 'gerardromero' },
     { name: 'Helena Condis', type: 'journalist', tier: 2, workplace: 'Cadena COPE', link: 'HelenaCondis' },
     { name: 'Laia Tudel', type: 'journalist', tier: 2, workplace: 'CatRadio', link: 'laiatudel' },
     { name: 'Marcelo Bechler', type: 'journalist', tier: 2, workplace: 'Esporte Interativo', link: 'marcelobechler' },
