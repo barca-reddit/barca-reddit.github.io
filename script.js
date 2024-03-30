@@ -114,6 +114,7 @@ const sources = [
     { name: 'GSpanishFN', tier: 'aggregator', link: 'GSpanishFN' },
     { name: 'infosfcb', tier: 'aggregator', link: 'infosfcb' },
     { name: 'LaSenyera', tier: 'aggregator', link: 'LaSenyera' },
+    { name: 'Reshad Rahman', tier: 'aggregator', link: 'ReshadFCB' },
 ];
 
 sources.forEach(source => {
