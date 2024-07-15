@@ -1,0 +1,11 @@
+{
+    // https://github.com/lukeed/clsx?tab=readme-ov-file#tailwind-support
+    "tailwindCSS.experimental.classRegex": [["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
+    "css.lint.unknownAtRules": "ignore",
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "files.exclude": {
+        "**/node_modules": true,
+        "**/dist": false,
+        "**/out": true
+    }
+}

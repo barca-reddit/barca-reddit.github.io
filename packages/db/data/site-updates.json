@@ -1,0 +1,997 @@
+[
+    {
+        "date": "2024-03-29T22:00:00.000Z",
+        "additions": [
+            {
+                "name": "Reshad Rahman",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            }
+        ],
+        "removals": null,
+        "promotions": null,
+        "demotions": null
+    },
+    {
+        "date": "2023-07-02T21:00:00.000Z",
+        "additions": [
+            {
+                "name": "Blaugranagram",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "Joaquim Piera",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Lorena González ",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Luis Miguelsanz",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Ramón Fuentes",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Tom Sanderson",
+                "prevTier": null,
+                "nextTier": "5"
+            }
+        ],
+        "removals": [
+            {
+                "name": "Mohamed Bouhafsi",
+                "prevTier": "3",
+                "nextTier": null
+            },
+            {
+                "name": "Reshad Rahman",
+                "prevTier": "aggregator",
+                "nextTier": null
+            }
+        ],
+        "promotions": [
+            {
+                "name": "Albert Rogé",
+                "prevTier": "3",
+                "nextTier": "1"
+            },
+            {
+                "name": "Fernando Polo",
+                "prevTier": "2",
+                "nextTier": "1"
+            },
+            {
+                "name": "Ferran Correas",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "Matteo Moretto",
+                "prevTier": "2",
+                "nextTier": "1"
+            },
+            {
+                "name": "Roger Torelló",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "Toni Juanmartí",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "Xavi Hernández Navarro",
+                "prevTier": "3",
+                "nextTier": "2"
+            }
+        ],
+        "demotions": [
+            {
+                "name": "Adrià Albets",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Alfredo Martínez",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "AS",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Fabrizio Romano",
+                "prevTier": "2",
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "Gerard Romero",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Josep Pedrerol",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Marca",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Marçal Llorente",
+                "prevTier": "3",
+                "nextTier": "5"
+            },
+            {
+                "name": "Santi Ovalle",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Sique Rodríguez",
+                "prevTier": "2",
+                "nextTier": "3"
+            }
+        ]
+    },
+    {
+        "date": "2022-07-16T21:00:00.000Z",
+        "additions": null,
+        "removals": null,
+        "promotions": [
+            {
+                "name": "Gerard Romero",
+                "prevTier": "2",
+                "nextTier": "1"
+            }
+        ],
+        "demotions": null
+    },
+    {
+        "date": "2022-01-17T22:00:00.000Z",
+        "additions": [
+            {
+                "name": "ActualiteBarca",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "Adrià Albets",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Adrià Soldevila",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Adrián Sánchez",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "Albert Nadal",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Anaïs Martí",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "ARA",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "beIN Sports",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Deportes Cuatro",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Ferran Correas",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Gabriel Sans",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Helena Condis",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Isaac Fouto",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Joan Vehils",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Jordi Blanco Duch",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Jose Alvarez Haya",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Josep Pedrerol",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Josep Soldado Gómez",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "La Sexta",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Laia Tudel",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Luis Rojo",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Marc Menchén",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Maria Garrido",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Marta Ramon",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Nicolo Schira",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "Pol Alonso",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "Quim Domènech",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Radio Marca",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Ramon Salmurri",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Roger Arbusà",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Rubén Uría",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Santi Ovalle",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Sergi Escudero",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Sergi Solé",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Shay Lugassi",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "Víctor Navarro",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Xavi Hernández Navarro",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Xavi Torres",
+                "prevTier": null,
+                "nextTier": "3"
+            }
+        ],
+        "removals": null,
+        "promotions": [
+            {
+                "name": "AS",
+                "prevTier": "5",
+                "nextTier": "4"
+            },
+            {
+                "name": "Ferran Martínez",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "Gerard Romero",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "L'Equipe",
+                "prevTier": "5",
+                "nextTier": "4"
+            }
+        ],
+        "demotions": [
+            {
+                "name": "Catalunya Radio",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Javi Miguel",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Toni Juanmartí",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Xavi Lemus",
+                "prevTier": "2",
+                "nextTier": "3"
+            }
+        ]
+    },
+    {
+        "date": "2022-01-06T22:00:00.000Z",
+        "additions": null,
+        "removals": null,
+        "promotions": null,
+        "demotions": [
+            {
+                "name": "Lluís Canut",
+                "prevTier": "2",
+                "nextTier": "3"
+            }
+        ]
+    },
+    {
+        "date": "2021-12-02T22:00:00.000Z",
+        "additions": [
+            {
+                "name": "El Nacional",
+                "prevTier": null,
+                "nextTier": "5"
+            }
+        ],
+        "removals": null,
+        "promotions": null,
+        "demotions": null
+    },
+    {
+        "date": "2021-08-04T21:00:00.000Z",
+        "additions": [
+            {
+                "name": "Barca_Buzz",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "barcacentre",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "BarcaTimes",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "BarcaUniversal",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "Express",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "FCBarcelonaFl",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "GSpanishFN",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "infosfcb",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "L'Equipe",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "LaSenyera",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "Matteo Moretto",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Reshad Rahman",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "Samuel Marsden",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Toni Juanmartí",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Xavi Lemus",
+                "prevTier": null,
+                "nextTier": "2"
+            }
+        ],
+        "removals": [
+            {
+                "name": "Bruno Alemany",
+                "prevTier": "2",
+                "nextTier": null
+            },
+            {
+                "name": "Roger Arbusà",
+                "prevTier": "2",
+                "nextTier": null
+            }
+        ],
+        "promotions": [
+            {
+                "name": "Catalunya Radio",
+                "prevTier": "2",
+                "nextTier": "1"
+            },
+            {
+                "name": "Fernando Polo",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "Moises Llorens",
+                "prevTier": "3",
+                "nextTier": "2"
+            }
+        ],
+        "demotions": [
+            {
+                "name": "AS",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Gerard Romero",
+                "prevTier": "2",
+                "nextTier": "3"
+            }
+        ]
+    },
+    {
+        "date": "2020-08-04T21:00:00.000Z",
+        "additions": null,
+        "removals": null,
+        "promotions": [
+            {
+                "name": "Sique Rodríguez",
+                "prevTier": "3",
+                "nextTier": "2"
+            }
+        ],
+        "demotions": null
+    },
+    {
+        "date": "2020-07-14T21:00:00.000Z",
+        "additions": null,
+        "removals": [
+            {
+                "name": "BBC Sport",
+                "prevTier": "1",
+                "nextTier": null
+            },
+            {
+                "name": "Raül Llimós",
+                "prevTier": "2",
+                "nextTier": null
+            }
+        ],
+        "promotions": [
+            {
+                "name": "Catalunya Radio",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "RAC1",
+                "prevTier": "3",
+                "nextTier": "2"
+            }
+        ],
+        "demotions": [
+            {
+                "name": "TV3 Cat",
+                "prevTier": "1",
+                "nextTier": "2"
+            }
+        ]
+    },
+    {
+        "date": "2020-06-03T21:00:00.000Z",
+        "additions": [
+            {
+                "name": "Chiringuito TV",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "David Valdearenas",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "Javi Miguel",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Onda Cero",
+                "prevTier": null,
+                "nextTier": "3"
+            }
+        ],
+        "removals": null,
+        "promotions": [
+            {
+                "name": "Achraf Ben Ayad",
+                "prevTier": "2",
+                "nextTier": "1"
+            }
+        ],
+        "demotions": [
+            {
+                "name": "Albert Rogé",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Catalunya Radio",
+                "prevTier": "1",
+                "nextTier": "3"
+            },
+            {
+                "name": "Francesc Aguilar",
+                "prevTier": "2",
+                "nextTier": "4"
+            },
+            {
+                "name": "Gianluca Di Marzio",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Lluís Canut",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Mohamed Bouhafsi",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Oriol Domènech",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "RAC1",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Sique Rodríguez",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Sport",
+                "prevTier": "3",
+                "nextTier": "4"
+            }
+        ]
+    },
+    {
+        "date": "2019-06-04T21:00:00.000Z",
+        "additions": [
+            {
+                "name": "Albert Rogé",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Bruno Alemany",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Cadena COPE",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Cadena SER",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Catalunya Radio",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Daily Star",
+                "prevTier": null,
+                "nextTier": "5"
+            },
+            {
+                "name": "Fabrizio Romano",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Fernando Polo",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Ferran Martínez",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Lluís Canut",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Marçal Llorente",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Marcelo Bechler",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Moises Llorens",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Oriol Domènech",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Roger Arbusà",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Roger Torelló",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "The Mirror",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Tuttosport",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Twitter ITKs",
+                "prevTier": null,
+                "nextTier": "5"
+            }
+        ],
+        "removals": [
+            {
+                "name": "Lucas Resende",
+                "prevTier": "4",
+                "nextTier": null
+            },
+            {
+                "name": "Rafael Hernández",
+                "prevTier": "4",
+                "nextTier": null
+            }
+        ],
+        "promotions": null,
+        "demotions": [
+            {
+                "name": "90min",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Bild",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Daily Mail",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Diario Gol",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Don Balón",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Gerard Romero",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "RAC1",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Tancredi Palmeri",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "The Sun",
+                "prevTier": "4",
+                "nextTier": "5"
+            }
+        ]
+    },
+    {
+        "date": "2018-12-31T22:00:00.000Z",
+        "additions": [
+            {
+                "name": "90min",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Achraf Ben Ayad",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Alfredo Martínez",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "AS",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "BBC Sport",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Bild",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Daily Mail",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Diario Gol",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Don Balón",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Edu Polo",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Francesc Aguilar",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Gerard Romero",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Gianluca Di Marzio",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Guillem Balagué",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Lucas Resende",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Marca",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Miguel Rico",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Mohamed Bouhafsi",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Mundo Deportivo",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "RAC1",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Rafael Hernández",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "Raül Llimós",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Roger Saperas",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Sique Rodríguez",
+                "prevTier": null,
+                "nextTier": "2"
+            },
+            {
+                "name": "Sport",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Tancredi Palmeri",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "The Sun",
+                "prevTier": null,
+                "nextTier": "4"
+            },
+            {
+                "name": "TV3 Cat",
+                "prevTier": null,
+                "nextTier": "1"
+            },
+            {
+                "name": "Xavi Campos",
+                "prevTier": null,
+                "nextTier": "1"
+            }
+        ],
+        "removals": null,
+        "promotions": null,
+        "demotions": null
+    }
+]

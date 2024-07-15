@@ -1,0 +1,23 @@
+{
+    "name": "media-reliability-v2",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "check": "pnpm -r check",
+        "lint": "pnpm -r lint",
+        "export": "pnpm --filter @repo/db run build && pnpm --filter @repo/db run start",
+        "site": "pnpm --filter @repo/site run watch",
+        "gh-pages": "pnpm --filter @repo/site run build",
+        "update": "pnpm up --latest --interactive --recursive"
+    },
+    "author": "decho",
+    "license": "MIT",
+    "devDependencies": {
+        "@virtuallyunknown/esbuild": "^0.1.3",
+        "@virtuallyunknown/eslint-config": "^0.1.3",
+        "@virtuallyunknown/tsconfig": "^0.1.3",
+        "chokidar": "^3.6.0",
+        "fs-extra": "^11.2.0",
+        "typescript": "^5.5.3"
+    }
+}

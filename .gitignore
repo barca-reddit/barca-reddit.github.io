@@ -1,0 +1,12 @@
+# node modules
+node_modules/
+
+# env files
+.env
+
+# build artifacts
+dist/
+out/
+
+# other
+todo.md

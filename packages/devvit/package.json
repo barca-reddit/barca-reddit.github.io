@@ -1,0 +1,16 @@
+{
+    "name": "@repo/devvit",
+    "type": "module",
+    "scripts": {
+        "check": "tsc --noEmit",
+        "lint": "eslint --max-warnings 0 src"
+    },
+    "dependencies": {
+        "@devvit/public-api": "^0.10.22"
+    },
+    "devDependencies": {
+        "@devvit/protos": "^0.10.22",
+        "@repo/db": "workspace:*",
+        "vitest": "^1.6.0"
+    }
+}
