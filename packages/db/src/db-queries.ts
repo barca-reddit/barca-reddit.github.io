@@ -38,6 +38,7 @@ export const siteTiersQuery = db
                 .onRef('sources.id', '=', 'updated.updatedOnId')
         )
         .where('sources.removed', '=', false)
+        .orderBy('sources.name', 'asc')
         .selectAll()
     )
     .with('groups', db => db

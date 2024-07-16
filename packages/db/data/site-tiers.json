@@ -15,7 +15,7 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "beIN"
+                            "Mundo Deportivo"
                         ],
                         "addedOn": "2019-01-01",
                         "updatedOn": "2020-06-04"
@@ -30,7 +30,9 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Sport"
+                            "Jijantes FC",
+                            "TV3",
+                            "RAC1"
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2023-07-03"
@@ -1368,6 +1370,21 @@
                         "updatedOn": "2019-06-05"
                     },
                     {
+                        "id": "39596a36-4b20-4105-882e-6ccaef0289fd",
+                        "name": "Don Balón",
+                        "type": "media",
+                        "tier": "5",
+                        "handles": [
+                            "DonBalon"
+                        ],
+                        "domains": [
+                            "donbalon.com"
+                        ],
+                        "organizations": null,
+                        "addedOn": "2019-01-01",
+                        "updatedOn": "2019-06-05"
+                    },
+                    {
                         "id": "c78271ff-9f49-4b99-b03a-915bb6a50229",
                         "name": "El Nacional",
                         "type": "media",
@@ -1436,21 +1453,6 @@
                         "domains": null,
                         "organizations": null,
                         "addedOn": "2019-06-05",
-                        "updatedOn": "2019-06-05"
-                    },
-                    {
-                        "id": "39596a36-4b20-4105-882e-6ccaef0289fd",
-                        "name": "Don Balón",
-                        "type": "media",
-                        "tier": "5",
-                        "handles": [
-                            "DonBalon"
-                        ],
-                        "domains": [
-                            "donbalon.com"
-                        ],
-                        "organizations": null,
-                        "addedOn": "2019-01-01",
                         "updatedOn": "2019-06-05"
                     }
                 ]
