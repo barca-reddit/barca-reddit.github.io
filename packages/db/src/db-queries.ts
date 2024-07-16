@@ -128,20 +128,24 @@ export const siteUpdatesQuery = db
 export const devvitSourcesQuery = db
     .selectFrom('sources')
     .leftJoin('aliases', 'aliases.sourceId', 'sources.id')
-    .selectAll(['sources'])
     .select(eb => [
+        'sources.id',
+        'sources.name',
+        'sources.tier',
+        'sources.domains',
+        'sources.handles',
         eb.fn<string>('unaccent', [eb.fn('lower', ['sources.name'])]).as('nameNormalized'),
         eb
             .fn
             .jsonAgg(
-                // jsonBuildObject({
-                //     alias: eb.ref('aliases.alias'),
-                //     aliasIsCommon: eb.ref('aliases.aliasIsCommon'),
-                // })
-                eb.fn.toJson('aliases')
+                jsonBuildObject({
+                    alias: eb.ref('aliases.alias'),
+                    aliasNormalized: eb.fn<string>('unaccent', [eb.fn('lower', ['aliases.alias'])]),
+                    aliasIsCommon: eb.ref('aliases.aliasIsCommon'),
+                })
             )
             .filterWhere('aliases.id', 'is not', null)
-            // .$castTo<{ alias: string, aliasIsCommon: boolean }[] | null>()
+            .$castTo<{ alias: string, aliasNormalized: string, aliasIsCommon: boolean }[] | null>()
             .as('aliases')
     ])
     .where('sources.removed', '=', false)
