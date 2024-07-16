@@ -14,7 +14,7 @@ const TooltipDetails = ({ source }: { source: TierSource }) => {
                 </h3>
                 <span className='sr-only' id={`${source.id}-details`}>{`${source.name} details`}</span>
             </div>
-            <div className='grid grid-cols-[min-content,1fr] gap-y-3 p-4 leading-none'>
+            <div className='grid grid-cols-[min-content,1fr] gap-x-2 gap-y-3 p-4 leading-none'>
                 <span className='text-nowrap text-left '>Type:</span>
                 <span className='text-right'>{source.type}</span>
 
