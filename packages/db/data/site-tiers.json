@@ -32,7 +32,8 @@
                         "organizations": [
                             "Jijantes FC",
                             "TV3",
-                            "RAC1"
+                            "RAC1",
+                            "Sport"
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2023-07-03"
@@ -47,7 +48,7 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Mundo Deportivo"
+                            "FC Barcelona"
                         ],
                         "addedOn": "2019-01-01",
                         "updatedOn": "2019-01-01"
@@ -132,6 +133,7 @@
                         ],
                         "domains": null,
                         "organizations": [
+                            "Cadena SER",
                             "Goal"
                         ],
                         "addedOn": "2022-01-18",
@@ -162,6 +164,7 @@
                         ],
                         "domains": null,
                         "organizations": [
+                            "Sport",
                             "RAC1"
                         ],
                         "addedOn": "2022-01-18",
@@ -177,7 +180,9 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Mundo Deportivo"
+                            "Mundo Deportivo",
+                            "RAC1",
+                            "CatRadio"
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2022-01-18"
@@ -207,7 +212,9 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Cadena COPE"
+                            "Cadena COPE",
+                            "TV3",
+                            "CatRadio"
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
@@ -265,7 +272,7 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Esporte Interativo"
+                            "TNT Sports"
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2019-06-05"
@@ -280,7 +287,8 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "RAC1"
+                            "RAC1",
+                            "ARA"
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
@@ -385,7 +393,8 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Mundo Deportivo"
+                            "Mundo Deportivo",
+                            "beIN"
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2023-07-03"
@@ -565,7 +574,10 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "LaVanguardia"
+                            "LaVanguardia",
+                            "CatRadio",
+                            "TV3",
+                            "RAC1"
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
@@ -625,7 +637,9 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "AS"
+                            "AS",
+                            "CatRadio",
+                            "El Chiringuito"
                         ],
                         "addedOn": "2020-06-04",
                         "updatedOn": "2022-01-18"
@@ -698,7 +712,8 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Sport"
+                            "Goal",
+                            "CatRadio"
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
@@ -738,9 +753,7 @@
                         "name": "Sique Rodríguez",
                         "type": "journalist",
                         "tier": "3",
-                        "handles": [
-                            "SiqueRodriguez"
-                        ],
+                        "handles": null,
                         "domains": null,
                         "organizations": [
                             "Cadena SER"
@@ -893,7 +906,7 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Sky"
+                            "BBC"
                         ],
                         "addedOn": "2019-01-01",
                         "updatedOn": "2019-01-01"
@@ -1193,7 +1206,8 @@
                         ],
                         "domains": null,
                         "organizations": [
-                            "Mundo Deportivo"
+                            "Mundo Deportivo",
+                            "El Chiringuito"
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2023-07-03"

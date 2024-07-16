@@ -525,9 +525,7 @@
         "name": "Sique Rodríguez",
         "tier": "3",
         "domains": null,
-        "handles": [
-            "SiqueRodriguez"
-        ],
+        "handles": null,
         "nameNormalized": "sique rodriguez",
         "aliases": null
     },
