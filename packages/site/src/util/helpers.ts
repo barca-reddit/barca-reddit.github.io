@@ -74,7 +74,7 @@ export function getTooltipPosition(container: HTMLElement, item: HTMLElement, to
         const tooltipSideWidth = (tooltipRect.width - itemRect.width) / 2;
 
         if (spaceRight < tooltipSideWidth) {
-            left = `-${tooltipRect.width - (spaceRight + itemRect.width) + 16}px`;
+            left = `-${tooltipRect.width - (spaceRight + itemRect.width)}px`;
         }
     }
 
