@@ -5,8 +5,8 @@ node_modules/
 .env
 
 # build artifacts
-dist/
-out/
+packages/**/dist/
+packages/**/out/
 
 # other
 todo.md
