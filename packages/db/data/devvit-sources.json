@@ -2,323 +2,324 @@
     {
         "id": "6a12505f-4b52-4677-b82b-d9650d434e71",
         "name": "Achraf Ben Ayad",
+        "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
             "Benayadachraf"
         ],
-        "nameNormalized": "achraf ben ayad",
         "aliases": null
     },
     {
         "id": "f35864eb-823c-4262-85e0-51172b4a926b",
         "name": "Albert Rogé",
+        "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
             "albert_roge"
         ],
-        "nameNormalized": "albert roge",
         "aliases": null
     },
     {
         "id": "380d2b0f-0dc0-4f0c-8225-82f5e5bf8f65",
         "name": "Edu Polo",
+        "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
             "EduPolo"
         ],
-        "nameNormalized": "edu polo",
         "aliases": null
     },
     {
         "id": "89dbfd71-ffc1-4c2d-9c91-43769693487f",
         "name": "Fernando Polo",
+        "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
             "ffpolo"
         ],
-        "nameNormalized": "fernando polo",
         "aliases": null
     },
     {
         "id": "4a153bb9-22a2-4f3f-999a-fce8f9dadf3d",
         "name": "Matteo Moretto",
+        "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
             "MatteMoretto"
         ],
-        "nameNormalized": "matteo moretto",
         "aliases": null
     },
     {
         "id": "a0caf81a-48af-4ae7-b55a-e6891fd1c082",
         "name": "Ramón Fuentes",
+        "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
             "ramonfuentes74"
         ],
-        "nameNormalized": "ramon fuentes",
         "aliases": null
     },
     {
         "id": "b67fb745-5b33-449b-befd-24ec6d00ec06",
         "name": "Xavi Campos",
+        "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
             "xavicampos"
         ],
-        "nameNormalized": "xavi campos",
         "aliases": null
     },
     {
         "id": "01d79f41-56db-473a-80b5-1de31b646a12",
         "name": "Adrià Soldevila",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "AdriaSoldevila"
         ],
-        "nameNormalized": "adria soldevila",
         "aliases": null
     },
     {
         "id": "2cae9df4-9709-4fac-8ea0-813fe35ab86c",
         "name": "Alfredo Martínez",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "Alfremartinezz"
         ],
-        "nameNormalized": "alfredo martinez",
         "aliases": null
     },
     {
         "id": "1c9a8249-065c-42d3-93af-5c5415062eaa",
         "name": "Ferran Correas",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "ferrancorreas"
         ],
-        "nameNormalized": "ferran correas",
         "aliases": null
     },
     {
         "id": "490342c2-147b-40c5-8ebc-0143b8f1156a",
         "name": "Ferran Martínez",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "martinezferran"
         ],
-        "nameNormalized": "ferran martinez",
         "aliases": null
     },
     {
         "id": "b802dd02-d476-418c-b484-35a994deafaa",
         "name": "Gerard Romero",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "gerardromero"
         ],
-        "nameNormalized": "gerard romero",
         "aliases": null
     },
     {
         "id": "20e200a5-b2e0-4978-a352-cc826e76c0e6",
         "name": "Helena Condis",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "HelenaCondis"
         ],
-        "nameNormalized": "helena condis",
         "aliases": null
     },
     {
         "id": "2a07cf40-81a9-4fad-a71c-5b432db881e4",
         "name": "Joaquim Piera",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "joaquimpiera"
         ],
-        "nameNormalized": "joaquim piera",
         "aliases": null
     },
     {
         "id": "93d87898-a1af-4378-885d-5656697d6313",
         "name": "Laia Tudel",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "laiatudel"
         ],
-        "nameNormalized": "laia tudel",
         "aliases": null
     },
     {
         "id": "cccf51c3-0374-43a4-9c39-263390956560",
         "name": "Lorena González ",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": null,
-        "nameNormalized": "lorena gonzalez ",
         "aliases": null
     },
     {
         "id": "01b7fe16-6568-4bee-a5c9-3d3bd6c0fd5c",
         "name": "Marcelo Bechler",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "marcelobechler"
         ],
-        "nameNormalized": "marcelo bechler",
         "aliases": null
     },
     {
         "id": "c0ae6d00-1e26-48f0-b9cd-dc70aaf4c3d0",
         "name": "Marta Ramon",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "Marta_Ramon"
         ],
-        "nameNormalized": "marta ramon",
         "aliases": null
     },
     {
         "id": "f9f51e7c-3858-41b3-8825-3bb53a05e3d2",
         "name": "Miguel Rico",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "MigRico"
         ],
-        "nameNormalized": "miguel rico",
         "aliases": null
     },
     {
         "id": "04cd40db-4da2-4166-922f-eb132769ee5e",
         "name": "Moises Llorens",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "moillorens"
         ],
-        "nameNormalized": "moises llorens",
         "aliases": null
     },
     {
         "id": "0b224ffc-135b-4c7f-9ab7-0c46a66f9d2f",
         "name": "Oriol Domènech",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "orioldomenech"
         ],
-        "nameNormalized": "oriol domenech",
         "aliases": null
     },
     {
         "id": "dbf61d9d-55d7-4918-a941-a0a160752a68",
         "name": "Ramon Salmurri",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "rsalmurri"
         ],
-        "nameNormalized": "ramon salmurri",
         "aliases": null
     },
     {
         "id": "a9c4fbe6-ee06-47fc-b882-2117fd90fa4a",
         "name": "Roger Arbusà",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "RogerArbusa"
         ],
-        "nameNormalized": "roger arbusa",
         "aliases": null
     },
     {
         "id": "8a6abe39-60aa-4e64-9c71-80c5ade9e92a",
         "name": "Roger Saperas",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "RogerSaperas"
         ],
-        "nameNormalized": "roger saperas",
         "aliases": null
     },
     {
         "id": "76aa3da9-8942-44e5-a840-97920c098429",
         "name": "Roger Torelló",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "RogerTorello"
         ],
-        "nameNormalized": "roger torello",
         "aliases": null
     },
     {
         "id": "0d269cc8-3e9a-4d24-b27e-83fd88c99f19",
         "name": "Samuel Marsden",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "samuelmarsden"
         ],
-        "nameNormalized": "samuel marsden",
         "aliases": null
     },
     {
         "id": "55faf423-ac92-42aa-b953-923fd4e15c24",
         "name": "Sergi Escudero",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "sergiescudero"
         ],
-        "nameNormalized": "sergi escudero",
         "aliases": null
     },
     {
         "id": "b88bb9d8-1746-42ae-a4e4-d72d0ad5f82b",
         "name": "Toni Juanmartí",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "tjuanmarti"
         ],
-        "nameNormalized": "toni juanmarti",
         "aliases": null
     },
     {
         "id": "a7092100-7049-483c-96db-7f2499db3518",
         "name": "Xavi Hernández Navarro",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
             "xavi__hdez"
         ],
-        "nameNormalized": "xavi hernandez navarro",
         "aliases": null
     },
     {
         "id": "fa5e49d0-2a28-4ad9-87d8-0e5a573a0d52",
         "name": "Cadena SER",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": [
             "cadenaser.com"
@@ -326,12 +327,12 @@
         "handles": [
             "QueThiJugues"
         ],
-        "nameNormalized": "cadena ser",
         "aliases": null
     },
     {
         "id": "34d8e7d5-32a9-48d3-bfe3-a02e5611ac25",
         "name": "Catalunya Radio",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": [
             "ccma.cat"
@@ -339,12 +340,12 @@
         "handles": [
             "Catradioesports"
         ],
-        "nameNormalized": "catalunya radio",
         "aliases": null
     },
     {
         "id": "c3ce2b1c-2f59-4b39-b764-ce6f0f7d7a9c",
         "name": "RAC1",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": [
             "rac1.cat"
@@ -352,12 +353,12 @@
         "handles": [
             "EsportsRAC1"
         ],
-        "nameNormalized": "rac1",
         "aliases": null
     },
     {
         "id": "ea575328-509e-4027-b1f3-8c13b4ac3be3",
         "name": "TV3 Cat",
+        "nameIsCommon": false,
         "tier": "2",
         "domains": [
             "ccma.cat"
@@ -365,206 +366,206 @@
         "handles": [
             "OnzeTv3"
         ],
-        "nameNormalized": "tv3 cat",
         "aliases": null
     },
     {
         "id": "b932675b-754b-4dcf-9ea2-e8c59fe15658",
         "name": "Adrià Albets",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "AdriaAlbets"
         ],
-        "nameNormalized": "adria albets",
         "aliases": null
     },
     {
         "id": "ab9ef0c6-a88d-4d2a-901f-f388b6821695",
         "name": "Albert Nadal",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "AlbertNadal7"
         ],
-        "nameNormalized": "albert nadal",
         "aliases": null
     },
     {
         "id": "f370cdf6-0a20-4ce7-9b87-151b3eb7b133",
         "name": "Anaïs Martí",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "amartiherrero"
         ],
-        "nameNormalized": "anais marti",
         "aliases": null
     },
     {
         "id": "2206f4ea-3efd-42b7-81d9-194d8a8b12e3",
         "name": "Gabriel Sans",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "gbsans"
         ],
-        "nameNormalized": "gabriel sans",
         "aliases": null
     },
     {
         "id": "8ce5fd6b-d04b-4c3d-b391-ea830c4c9369",
         "name": "Gianluca Di Marzio",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "DiMarzio"
         ],
-        "nameNormalized": "gianluca di marzio",
         "aliases": null
     },
     {
         "id": "5e1d9f81-7c81-4bcc-b013-a6877afa1f0c",
         "name": "Isaac Fouto",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "isaacfouto"
         ],
-        "nameNormalized": "isaac fouto",
         "aliases": null
     },
     {
         "id": "0e0cee43-7be9-484d-921c-e3361ce2d46d",
         "name": "Javi Miguel",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "fansjavimiguel"
         ],
-        "nameNormalized": "javi miguel",
         "aliases": null
     },
     {
         "id": "8a1c322f-f975-46f4-8d5c-0a241e8301a5",
         "name": "Joan Vehils",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "jvehils"
         ],
-        "nameNormalized": "joan vehils",
         "aliases": null
     },
     {
         "id": "a7bb7b58-bdfb-4c63-94a7-b269a256a114",
         "name": "Lluís Canut",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": null,
-        "nameNormalized": "lluis canut",
         "aliases": null
     },
     {
         "id": "b976b84e-d336-41af-baab-2fcc820f92fc",
         "name": "Marc Menchén",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "marcmenchen"
         ],
-        "nameNormalized": "marc menchen",
         "aliases": null
     },
     {
         "id": "593125ce-70cd-4ca9-8001-8d1657b6f492",
         "name": "Maria Garrido",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "mariagarridos"
         ],
-        "nameNormalized": "maria garrido",
         "aliases": null
     },
     {
         "id": "db13ed22-22ff-4dfb-8926-376d20527ca2",
         "name": "Rubén Uría",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "rubenuria"
         ],
-        "nameNormalized": "ruben uria",
         "aliases": null
     },
     {
         "id": "c7e084a3-aef3-4696-a101-afe027b4092a",
         "name": "Santi Ovalle",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "santiovalle"
         ],
-        "nameNormalized": "santi ovalle",
         "aliases": null
     },
     {
         "id": "de137761-cb4d-447e-937e-40afd5ffaa4d",
         "name": "Sergi Solé",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "sergisoleMD"
         ],
-        "nameNormalized": "sergi sole",
         "aliases": null
     },
     {
         "id": "a0b4cad5-56d0-4be9-8105-a7c9efa6404a",
         "name": "Sique Rodríguez",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": null,
-        "nameNormalized": "sique rodriguez",
         "aliases": null
     },
     {
         "id": "cffa0d13-5709-47ce-a1a7-da575f285e9e",
         "name": "Víctor Navarro",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "victor_nahe"
         ],
-        "nameNormalized": "victor navarro",
         "aliases": null
     },
     {
         "id": "f59911a6-38c0-4df5-bbaf-cf06e245f459",
         "name": "Xavi Lemus",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "xlemus"
         ],
-        "nameNormalized": "xavi lemus",
         "aliases": null
     },
     {
         "id": "9168e0f1-108e-4e84-9e8d-adb7a71014b3",
         "name": "Xavi Torres",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
             "xavitorresll"
         ],
-        "nameNormalized": "xavi torres",
         "aliases": null
     },
     {
         "id": "b387fa70-415f-4709-8f26-8b8f4521d793",
         "name": "ARA",
+        "nameIsCommon": true,
         "tier": "3",
         "domains": [
             "ara.cat"
@@ -572,12 +573,12 @@
         "handles": [
             "ARAesports"
         ],
-        "nameNormalized": "ara",
         "aliases": null
     },
     {
         "id": "1757b1d6-8115-435d-803c-b95671f37785",
         "name": "Cadena COPE",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": [
             "cope.es"
@@ -585,12 +586,12 @@
         "handles": [
             "partidazocope"
         ],
-        "nameNormalized": "cadena cope",
         "aliases": null
     },
     {
         "id": "d78c7fab-8b96-42fd-bd75-4163eef7aef0",
         "name": "Mundo Deportivo",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": [
             "mundodeportivo.com"
@@ -598,11 +599,9 @@
         "handles": [
             "mundodeportivo"
         ],
-        "nameNormalized": "mundo deportivo",
         "aliases": [
             {
                 "alias": "MD",
-                "aliasNormalized": "md",
                 "aliasIsCommon": true
             }
         ]
@@ -610,6 +609,7 @@
     {
         "id": "85fd5706-c7dd-4230-900d-9b4928f78305",
         "name": "Onda Cero",
+        "nameIsCommon": false,
         "tier": "3",
         "domains": [
             "ondacero.es"
@@ -617,98 +617,98 @@
         "handles": [
             "OndaCero_es"
         ],
-        "nameNormalized": "onda cero",
         "aliases": null
     },
     {
         "id": "7755afa2-9f92-4bbe-9122-037823ce91d0",
         "name": "Francesc Aguilar",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": [
             "FApor_elmundo"
         ],
-        "nameNormalized": "francesc aguilar",
         "aliases": null
     },
     {
         "id": "4f6fb9de-b912-49f0-bb27-6a1022cf2a0b",
         "name": "Guillem Balagué",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": [
             "GuillemBalague"
         ],
-        "nameNormalized": "guillem balague",
         "aliases": null
     },
     {
         "id": "7f1485aa-afaf-44ae-bd26-566c7f727ea7",
         "name": "Jordi Blanco Duch",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": [
             "Elwood_White"
         ],
-        "nameNormalized": "jordi blanco duch",
         "aliases": null
     },
     {
         "id": "3d4ef3db-febf-4533-bc36-0abfd3ec3eec",
         "name": "Jose Alvarez Haya",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": [
             "10JoseAlvarez"
         ],
-        "nameNormalized": "jose alvarez haya",
         "aliases": null
     },
     {
         "id": "272e6b68-715e-4f05-95fd-de298f121663",
         "name": "Josep Soldado Gómez",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": [
             "JosepSoldado"
         ],
-        "nameNormalized": "josep soldado gomez",
         "aliases": null
     },
     {
         "id": "7e5fc052-1ba0-4ae8-b2e7-d95c2963ba1a",
         "name": "Luis Miguelsanz",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": null,
-        "nameNormalized": "luis miguelsanz",
         "aliases": null
     },
     {
         "id": "accfac12-bdc4-4676-af90-3c8ed26497df",
         "name": "Luis Rojo",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": [
             "Luis_F_Rojo"
         ],
-        "nameNormalized": "luis rojo",
         "aliases": null
     },
     {
         "id": "a80ef6b8-e0af-49af-9c1f-2ec5dc7d3d20",
         "name": "Quim Domènech",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": null,
         "handles": [
             "quimdomenech"
         ],
-        "nameNormalized": "quim domenech",
         "aliases": null
     },
     {
         "id": "632f5b1d-55ab-4542-94c7-5ba8238cb20e",
         "name": "beIN Sports",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": [
             "beinsports.com",
@@ -717,12 +717,12 @@
         "handles": [
             "beINSPORTS_EN"
         ],
-        "nameNormalized": "bein sports",
         "aliases": null
     },
     {
         "id": "6ccfea1c-4ea4-445a-9eb7-825e90f0cd6d",
         "name": "Chiringuito TV",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": [
             "mega.atresmedia.com"
@@ -730,12 +730,12 @@
         "handles": [
             "elchiringuitotv"
         ],
-        "nameNormalized": "chiringuito tv",
         "aliases": null
     },
     {
         "id": "f762e077-8ddd-43c6-910d-8ce4fe112c12",
         "name": "Deportes Cuatro",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": [
             "eldesmarque.com",
@@ -744,12 +744,12 @@
         "handles": [
             "DeportesCuatro"
         ],
-        "nameNormalized": "deportes cuatro",
         "aliases": null
     },
     {
         "id": "ad2aedec-40af-421b-82c5-0296ea4dab64",
         "name": "La Sexta",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": [
             "lasexta.com"
@@ -757,12 +757,12 @@
         "handles": [
             "DeporteslaSexta"
         ],
-        "nameNormalized": "la sexta",
         "aliases": null
     },
     {
         "id": "9d888b69-9443-4b17-8426-ed1d69b0d1f7",
         "name": "L'Equipe",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": [
             "lequipe.fr"
@@ -770,12 +770,12 @@
         "handles": [
             "lequipe"
         ],
-        "nameNormalized": "l'equipe",
         "aliases": null
     },
     {
         "id": "ea418a18-309a-4bab-9ccb-373350ddb78a",
         "name": "Radio Marca",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": [
             "marca.com"
@@ -783,12 +783,12 @@
         "handles": [
             "RadioMARCA"
         ],
-        "nameNormalized": "radio marca",
         "aliases": null
     },
     {
         "id": "a92476ea-3b8e-4751-9556-0a31e06d22b7",
         "name": "Sport",
+        "nameIsCommon": true,
         "tier": "4",
         "domains": [
             "sport.es"
@@ -796,12 +796,12 @@
         "handles": [
             "sport"
         ],
-        "nameNormalized": "sport",
         "aliases": null
     },
     {
         "id": "e23a8067-c7bd-45c5-8edb-e6610ad5f9a6",
         "name": "The Mirror",
+        "nameIsCommon": true,
         "tier": "4",
         "domains": [
             "mirror.co.uk"
@@ -809,12 +809,12 @@
         "handles": [
             "MirrorFootball"
         ],
-        "nameNormalized": "the mirror",
         "aliases": null
     },
     {
         "id": "9398b899-46ca-4991-b3c6-bb0b0cf10bdc",
         "name": "Tuttosport",
+        "nameIsCommon": false,
         "tier": "4",
         "domains": [
             "tuttosport.com"
@@ -822,111 +822,111 @@
         "handles": [
             "tuttosport"
         ],
-        "nameNormalized": "tuttosport",
         "aliases": null
     },
     {
         "id": "579db7bc-8abf-42cd-8dd1-4ea128f9df59",
         "name": "Adrián Sánchez",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "_AdrianSnchz"
         ],
-        "nameNormalized": "adrian sanchez",
         "aliases": null
     },
     {
         "id": "ff92f2b5-3373-4471-b134-6e63e18ecd3d",
         "name": "David Valdearenas",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "davidvaldearen1"
         ],
-        "nameNormalized": "david valdearenas",
         "aliases": null
     },
     {
         "id": "3ded6465-f992-4265-ba84-8d0a1f99cf43",
         "name": "Josep Pedrerol",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "jpedrerol"
         ],
-        "nameNormalized": "josep pedrerol",
         "aliases": null
     },
     {
         "id": "8d438b64-68da-4c0d-a62e-ea166f30892d",
         "name": "Marçal Llorente",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "Marsallorente"
         ],
-        "nameNormalized": "marcal llorente",
         "aliases": null
     },
     {
         "id": "c95cfddd-132d-42ce-9f59-c67297453ed9",
         "name": "Nicolo Schira",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "NicoSchira"
         ],
-        "nameNormalized": "nicolo schira",
         "aliases": null
     },
     {
         "id": "282c9b58-57cc-434b-854c-e2d095ae3448",
         "name": "Pol Alonso",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "Polyccio8"
         ],
-        "nameNormalized": "pol alonso",
         "aliases": null
     },
     {
         "id": "836a6eb4-46c0-46f9-a3c8-d18556aa33ef",
         "name": "Shay Lugassi",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "Shlugassi"
         ],
-        "nameNormalized": "shay lugassi",
         "aliases": null
     },
     {
         "id": "d73a9804-d2f0-4653-a0d1-add7f6f0bdaa",
         "name": "Tancredi Palmeri",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "tancredipalmeri"
         ],
-        "nameNormalized": "tancredi palmeri",
         "aliases": null
     },
     {
         "id": "a246c41c-94c7-4178-860e-3b16482639bc",
         "name": "Tom Sanderson",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": [
             "TomSandersonBCN"
         ],
-        "nameNormalized": "tom sanderson",
         "aliases": null
     },
     {
         "id": "f05236be-41be-40eb-8a7b-adf37768dc2a",
         "name": "90min",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": [
             "90min.com",
@@ -935,12 +935,12 @@
         "handles": [
             "90min_Football"
         ],
-        "nameNormalized": "90min",
         "aliases": null
     },
     {
         "id": "3d9730c9-e729-4f81-8a7c-f491ad7f4654",
         "name": "AS",
+        "nameIsCommon": true,
         "tier": "5",
         "domains": [
             "as.com"
@@ -948,12 +948,12 @@
         "handles": [
             "diarioas"
         ],
-        "nameNormalized": "as",
         "aliases": null
     },
     {
         "id": "42bf2b46-1719-4f63-aa26-41f53d38259d",
         "name": "Bild",
+        "nameIsCommon": true,
         "tier": "5",
         "domains": [
             "bild.de"
@@ -961,12 +961,12 @@
         "handles": [
             "BILD_Sport"
         ],
-        "nameNormalized": "bild",
         "aliases": null
     },
     {
         "id": "08ab4848-9fcf-425f-924a-0cf09eb99dcd",
         "name": "Daily Mail",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": [
             "dailymail.co.uk"
@@ -974,12 +974,12 @@
         "handles": [
             "DailyMailUK"
         ],
-        "nameNormalized": "daily mail",
         "aliases": null
     },
     {
         "id": "c4665dfb-09c7-4bf5-8f6b-7dfbbe450b81",
         "name": "Daily Star",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": [
             "dailystar.co.uk"
@@ -987,12 +987,12 @@
         "handles": [
             "dailystar_sport"
         ],
-        "nameNormalized": "daily star",
         "aliases": null
     },
     {
         "id": "1d89b479-d412-454d-aec0-9b0ce0c10455",
         "name": "Diario Gol",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": [
             "diariogol.com"
@@ -1000,12 +1000,12 @@
         "handles": [
             "diariogolcom"
         ],
-        "nameNormalized": "diario gol",
         "aliases": null
     },
     {
         "id": "39596a36-4b20-4105-882e-6ccaef0289fd",
         "name": "Don Balón",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": [
             "donbalon.com"
@@ -1013,12 +1013,12 @@
         "handles": [
             "DonBalon"
         ],
-        "nameNormalized": "don balon",
         "aliases": null
     },
     {
         "id": "c78271ff-9f49-4b99-b03a-915bb6a50229",
         "name": "El Nacional",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": [
             "elnacional.cat"
@@ -1026,12 +1026,12 @@
         "handles": [
             "elnacionalcat"
         ],
-        "nameNormalized": "el nacional",
         "aliases": null
     },
     {
         "id": "460db1f8-ae3b-4c55-a79c-72659b61cafa",
         "name": "Express",
+        "nameIsCommon": true,
         "tier": "5",
         "domains": [
             "express.co.uk"
@@ -1039,12 +1039,12 @@
         "handles": [
             "DExpress_Sport"
         ],
-        "nameNormalized": "express",
         "aliases": null
     },
     {
         "id": "5cca76dd-7d73-4fbc-8ac1-fee0cb0da79e",
         "name": "Marca",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": [
             "marca.com"
@@ -1052,12 +1052,12 @@
         "handles": [
             "marca"
         ],
-        "nameNormalized": "marca",
         "aliases": null
     },
     {
         "id": "9c902c4c-982e-4b81-81ae-76c94480cf27",
         "name": "The Sun",
+        "nameIsCommon": true,
         "tier": "5",
         "domains": [
             "thesun.co.uk"
@@ -1065,148 +1065,147 @@
         "handles": [
             "SunSport"
         ],
-        "nameNormalized": "the sun",
         "aliases": null
     },
     {
         "id": "0f4ef456-5941-4536-aa43-d4323bb2f73c",
         "name": "Twitter ITKs",
+        "nameIsCommon": false,
         "tier": "5",
         "domains": null,
         "handles": null,
-        "nameNormalized": "twitter itks",
         "aliases": null
     },
     {
         "id": "b6d8f7ed-db0f-4ea4-ac34-e61ff760dd5c",
         "name": "ActualiteBarca",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "ActualiteBarca"
         ],
-        "nameNormalized": "actualitebarca",
         "aliases": null
     },
     {
         "id": "3f65aace-d909-4472-8c92-2f7839678fbd",
         "name": "Barca_Buzz",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "Barca_Buzz"
         ],
-        "nameNormalized": "barca_buzz",
         "aliases": null
     },
     {
         "id": "62dbe73d-bf1e-407f-98ec-ddbbea76958a",
         "name": "barcacentre",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "barcacentre"
         ],
-        "nameNormalized": "barcacentre",
         "aliases": null
     },
     {
         "id": "af354276-7e3b-4eec-9469-e2048a1c98ef",
         "name": "BarcaTimes",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "BarcaTimes"
         ],
-        "nameNormalized": "barcatimes",
         "aliases": null
     },
     {
         "id": "2c3c527a-3184-4f89-980d-f67f53818c83",
         "name": "BarcaUniversal",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "BarcaUniversal"
         ],
-        "nameNormalized": "barcauniversal",
         "aliases": null
     },
     {
         "id": "e8a5f6bb-c281-45ca-a343-4fd5fab793d1",
         "name": "Blaugranagram",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "Blaugranagram"
         ],
-        "nameNormalized": "blaugranagram",
         "aliases": null
     },
     {
         "id": "fb2e31e1-deab-4550-a38b-50c3e501fa81",
         "name": "Fabrizio Romano",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "FabrizioRomano"
         ],
-        "nameNormalized": "fabrizio romano",
         "aliases": null
     },
     {
         "id": "12f52a5b-c061-4bfc-83d8-456cb75ea180",
         "name": "FCBarcelonaFl",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "FCBarcelonaFl"
         ],
-        "nameNormalized": "fcbarcelonafl",
         "aliases": null
     },
     {
         "id": "3b606133-c92c-4319-9dc2-daf0f66649c4",
         "name": "GSpanishFN",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "GSpanishFN"
         ],
-        "nameNormalized": "gspanishfn",
         "aliases": null
     },
     {
         "id": "f7511a79-5e0a-434a-9897-25d9b351546a",
         "name": "infosfcb",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "infosfcb"
         ],
-        "nameNormalized": "infosfcb",
         "aliases": null
     },
     {
         "id": "795f68cc-c7ff-40f8-be62-609109202bf5",
         "name": "LaSenyera",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "LaSenyera"
         ],
-        "nameNormalized": "lasenyera",
         "aliases": null
     },
     {
         "id": "556a7625-f89c-46b2-a53b-cacc1ee2e97c",
         "name": "Reshad Rahman",
+        "nameIsCommon": false,
         "tier": "aggregator",
         "domains": null,
         "handles": [
             "ReshadFCB"
         ],
-        "nameNormalized": "reshad rahman",
         "aliases": null
     }
 ]

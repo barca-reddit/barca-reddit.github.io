@@ -132,16 +132,17 @@ export const devvitSourcesQuery = db
     .select(eb => [
         'sources.id',
         'sources.name',
+        'sources.nameIsCommon',
         'sources.tier',
         'sources.domains',
         'sources.handles',
-        eb.fn<string>('unaccent', [eb.fn('lower', ['sources.name'])]).as('nameNormalized'),
+        // eb.fn<string>('unaccent', [eb.fn('lower', ['sources.name'])]).as('nameNormalized'),
         eb
             .fn
             .jsonAgg(
                 jsonBuildObject({
                     alias: eb.ref('aliases.alias'),
-                    aliasNormalized: eb.fn<string>('unaccent', [eb.fn('lower', ['aliases.alias'])]),
+                    // aliasNormalized: eb.fn<string>('unaccent', [eb.fn('lower', ['aliases.alias'])]),
                     aliasIsCommon: eb.ref('aliases.aliasIsCommon'),
                 })
             )
