@@ -3,8 +3,9 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "check": "pnpm -r check",
-        "lint": "pnpm -r lint",
+        "check": "pnpm --stream --parallel --recursive check",
+        "lint": "pnpm --stream --parallel --recursive lint",
+        "test": "pnpm --stream --parallel --recursive test",
         "export": "pnpm --filter @repo/db run build && pnpm --filter @repo/db run start",
         "site": "pnpm --filter @repo/site run watch",
         "gh-pages": "pnpm --filter @repo/site run build",
