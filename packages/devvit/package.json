@@ -3,14 +3,19 @@
     "type": "module",
     "scripts": {
         "check": "tsc --noEmit",
-        "lint": "eslint --max-warnings 0 src"
+        "lint": "eslint --max-warnings 0 src",
+        "test": "vitest --reporter=verbose --run"
     },
     "dependencies": {
-        "@devvit/public-api": "^0.10.22"
+        "@devvit/public-api": "^0.10.22",
+        "linkify-it": "^5.0.0",
+        "zod": "^3.23.8",
+        "zod-validation-error": "^3.3.0"
     },
     "devDependencies": {
         "@devvit/protos": "^0.10.22",
         "@repo/db": "workspace:*",
-        "vitest": "^1.6.0"
+        "@types/linkify-it": "^5.0.0",
+        "vitest": "^2.0.3"
     }
 }

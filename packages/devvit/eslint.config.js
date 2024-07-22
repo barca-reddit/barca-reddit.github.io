@@ -15,7 +15,7 @@ export default [
     ...eslintPluginReactConfig,
     ...eslintPluginStylisticConfig,
     {
-        files: ["src/**/*.{ts,tsx}"],
+        files: ["src/**/*.{ts,tsx}", "test/**/*.{ts,tsx}"],
         languageOptions: {
             globals: {
                 ...globals.browser,
