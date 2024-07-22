@@ -18,7 +18,7 @@ const queries = {
     siteTiers: {
         data: (await db.executeQuery(siteTiersQuery)).rows,
         path: './data/site-tiers.json',
-        compareHash: true,
+        compareHash: false,
         isUpdated: true,
     },
     siteUpdates: {
@@ -52,16 +52,17 @@ await Promise.all(Object.entries(queries).map(async ([_, item]) => {
 
     if (file && item.compareHash) {
         item.isUpdated = JSON.stringify(file) !== JSON.stringify(item.data);
+        console.log(item);
     }
 
     await writeFile(item.path, JSON.stringify(item.data, null, 4));
 }));
 
 /**
- * Only update the site-meta.json file if either site-tiers or site-updates
- * have been updated or if they didn't exist before
+ * Only update the site-meta.json file if site-updates
+ * have been updated or if it didn't exist before
  */
-if (queries.siteTiers.isUpdated || queries.siteUpdates.isUpdated) {
+if (queries.siteUpdates.isUpdated) {
     await writeFile('./data/site-meta.json', JSON.stringify({ lastUpdate: new Date() }, null, 4));
 }
 
