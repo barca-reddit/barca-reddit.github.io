@@ -1,4 +1,4 @@
-import sourceList from '@repo/db/data/devvit-sources.json';
+import sourceList from '@repo/db/data/devvit-sources.json' with { type: 'json' };
 import { describe, expect, test } from 'vitest';
 import { settingsSchema } from '../src/index.js';
 
