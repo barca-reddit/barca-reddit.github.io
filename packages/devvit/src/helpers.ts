@@ -91,6 +91,17 @@ export function getTierDetails(tier: Source['tier']) {
     return tierData[tier];
 }
 
+export function getTierFlairId(tier: Source['tier'], settings: AppSettings) {
+    switch (tier) {
+        case '1': return settings.flairTier1Id;
+        case '2': return settings.flairTier2Id;
+        case '3': return settings.flairTier3Id;
+        case '4': return settings.flairTier4Id;
+        case '5': return settings.flairTier5Id;
+        default: return null;
+    }
+}
+
 export function sortTiers(a: Source, b: Source) {
     return getTierDetails(a.tier).order - getTierDetails(b.tier).order;
 }

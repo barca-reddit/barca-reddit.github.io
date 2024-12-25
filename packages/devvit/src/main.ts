@@ -17,28 +17,83 @@ Devvit.addSettings([
         }
     },
     {
-        type: 'string',
-        name: 'flairTemplateId',
-        label: 'Flair template ID',
-        helpText: 'The flair template ID to apply when assigning the flair.',
-        scope: 'installation',
-        defaultValue: '',
-        placeholder: 'Enter flair template ID here',
-        onValidate: ({ value }) => {
-            return validateSetting('flairTemplateId', value);
-        }
-    },
-    {
-        type: 'string',
-        name: 'flairCssClass',
-        label: 'Flair CSS class',
-        helpText: 'The CSS class to apply when assigning the flair.',
-        scope: 'installation',
-        defaultValue: '',
-        placeholder: 'Enter flair template ID here',
-        onValidate: ({ value }) => {
-            return validateSetting('flairCssClass', value);
-        }
+        type: 'group',
+        label: 'Flair settings',
+        helpText: 'Note: If you want to use the same flair for all tier sources, you can use the same flair ID for all fields.',
+        fields: [
+            {
+                type: 'string',
+                name: 'flairTier1Id',
+                label: 'Flair tier 1 id',
+                helpText: 'The flair id to apply when assigning the flair for tier 1 sources.',
+                scope: 'installation',
+                defaultValue: '',
+                placeholder: 'Enter flair id here',
+                onValidate: ({ value }) => {
+                    return validateSetting('flairTier1Id', value);
+                }
+            },
+            {
+                type: 'string',
+                name: 'flairTier2Id',
+                label: 'Flair tier 2 id',
+                helpText: 'The flair id to apply when assigning the flair for tier 2 sources.',
+                scope: 'installation',
+                defaultValue: '',
+                placeholder: 'Enter flair id here',
+                onValidate: ({ value }) => {
+                    return validateSetting('flairTier2Id', value);
+                }
+            },
+            {
+                type: 'string',
+                name: 'flairTier3Id',
+                label: 'Flair tier 3 id',
+                helpText: 'The flair id to apply when assigning the flair for tier 3 sources.',
+                scope: 'installation',
+                defaultValue: '',
+                placeholder: 'Enter flair id here',
+                onValidate: ({ value }) => {
+                    return validateSetting('flairTier3Id', value);
+                }
+            },
+            {
+                type: 'string',
+                name: 'flairTier4Id',
+                label: 'Flair tier 4 id',
+                helpText: 'The flair id to apply when assigning the flair for tier 4 sources.',
+                scope: 'installation',
+                defaultValue: '',
+                placeholder: 'Enter flair id here',
+                onValidate: ({ value }) => {
+                    return validateSetting('flairTier4Id', value);
+                }
+            },
+            {
+                type: 'string',
+                name: 'flairTier5Id',
+                label: 'Flair tier 5 id',
+                helpText: 'The flair id to apply when assigning the flair for tier 5 sources.',
+                scope: 'installation',
+                defaultValue: '',
+                placeholder: 'Enter flair id here',
+                onValidate: ({ value }) => {
+                    return validateSetting('flairTier5Id', value);
+                }
+            },
+            {
+                type: 'string',
+                name: 'flairCssClass',
+                label: 'Flair CSS class',
+                helpText: 'The CSS class to apply when assigning the flair.',
+                scope: 'installation',
+                defaultValue: '',
+                placeholder: 'Enter flair CSS class here',
+                onValidate: ({ value }) => {
+                    return validateSetting('flairCssClass', value);
+                }
+            },
+        ]
     },
     {
         type: 'paragraph',
@@ -100,6 +155,16 @@ Devvit.addSettings([
         defaultValue: true,
         onValidate: ({ value }) => {
             return validateSetting('analyzeLinksInBody', value);
+        }
+    },
+    {
+        type: 'boolean',
+        name: 'addTextToFlairs',
+        label: 'Add custom text to flairs',
+        helpText: 'If enabled, the bot will add custom text to the flairs containing the text Tier 1,2,3,4,5.',
+        defaultValue: false,
+        onValidate: ({ value }) => {
+            return validateSetting('addTextToFlairs', value);
         }
     },
     {

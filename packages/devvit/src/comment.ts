@@ -1,47 +1,14 @@
-import type { SetPostFlairOptions, TriggerContext } from '@devvit/public-api';
-import { getTierDetails } from './helpers.js';
+import type { TriggerContext } from '@devvit/public-api';
+import { getTierDetails, getTierFlairId } from './helpers.js';
 import type { AppSettings, PostData, Source } from './types.js';
 
-/**
- * Matched sources are sorted by tier.
- * Don't flair the post if:
- * - The first source is official or an aggregator.
- * - The post is a self-post.
- */
-function shouldFlairPost(postData: PostData, sources: Source[]) {
-    if (postData.url?.hostname && ['reddit.com', 'www.reddit.com'].includes(postData.url.hostname)) {
-        return false;
-    }
 
-    const { postFlairText } = getTierDetails(sources[0].tier);
-
-    return postFlairText !== null;
-}
-
-type FlairPostProps = {
-    postId: string;
+type HandleFlairProps = {
+    postData: PostData;
+    settings: AppSettings;
     sources: Source[];
-    subredditName: Exclude<SetPostFlairOptions['subredditName'], undefined>;
-    flairCssClass: Exclude<SetPostFlairOptions['cssClass'], undefined>;
-    flairTemplateId: Exclude<SetPostFlairOptions['flairTemplateId'], undefined>;
     context: TriggerContext;
 };
-
-export async function flairPost({ postId, sources, subredditName, flairCssClass, flairTemplateId, context }: FlairPostProps) {
-    const { postFlairText } = getTierDetails(sources[0].tier);
-
-    if (!postFlairText) {
-        return;
-    }
-
-    await context.reddit.setPostFlair({
-        postId,
-        text: postFlairText,
-        cssClass: flairCssClass,
-        flairTemplateId: flairTemplateId,
-        subredditName: subredditName
-    });
-}
 
 function getSourceLine(source: Source) {
     const { name, handles, tier, domains } = source;
@@ -66,17 +33,40 @@ type SubmitCommentProps = {
     context: TriggerContext;
 };
 
-export async function submitComment({ postData, sources, settings, context }: SubmitCommentProps) {
-    if (shouldFlairPost(postData, sources)) {
-        await flairPost({
-            postId: postData.id,
-            sources: sources,
-            subredditName: postData.subredditName,
-            flairCssClass: settings.flairCssClass,
-            flairTemplateId: settings.flairTemplateId,
-            context: context
-        });
+/**
+ * Matched sources are sorted by tier.
+ * Don't flair the post if:
+ * - The first source is official or an aggregator.
+ * - The post is a self-post.
+ */
+async function handleFlair({ postData, sources, settings, context }: HandleFlairProps) {
+    if (postData.url?.hostname && ['reddit.com', 'www.reddit.com'].includes(postData.url.hostname)) {
+        return false;
     }
+
+    const flairId = getTierFlairId(sources[0].tier, settings);
+
+    if (!flairId) {
+        return;
+    }
+
+    const { postFlairText } = getTierDetails(sources[0].tier);
+
+    if (!postFlairText) {
+        return;
+    }
+
+    await context.reddit.setPostFlair({
+        postId: postData.id,
+        subredditName: postData.subredditName,
+        flairTemplateId: flairId,
+        ...settings.addTextToFlairs && { text: postFlairText },
+        ...settings.flairCssClass && { cssClass: settings.flairCssClass },
+    });
+}
+
+export async function submitComment({ postData, sources, settings, context }: SubmitCommentProps) {
+    await handleFlair({ postData, sources, settings, context });
 
     const header = `**Media reliability report:**`;
     const warningForUnreliable = sources.some(source => getTierDetails(source.tier).unreliable)

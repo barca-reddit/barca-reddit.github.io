@@ -100,13 +100,19 @@ export const sourceSchema = z.object({
 
 export const settingsSchema = z.object({
     sources: z.preprocess((data, ctx) => preprocessJSON(data, ctx), z.array(sourceSchema)),
-    flairTemplateId: z.string(),
+    flairTier1Id: z.string(),
+    flairTier2Id: z.string(),
+    flairTier3Id: z.string(),
+    flairTier4Id: z.string(),
+    flairTier5Id: z.string(),
     flairCssClass: z.string(),
     commentFooter: z.string(),
     analyzeNamesInBody: z.boolean(),
     analyzeHandlesInBody: z.boolean(),
     analyzeLinksInBody: z.boolean(),
+    addTextToFlairs: z.boolean(),
     unreliableSourcesWarning: z.string(),
     ignoredUsers: z.preprocess((data, ctx) => preprocessCommaSeparated(data, ctx), z.array(z.string())),
     errorReportSubredditName: z.string(),
 });
+
