@@ -182,7 +182,7 @@ function isHandleInUrl({ url, source }: { url: URL, source: Source }) {
         return false;
     }
 
-    if (!['x.com', 'twitter.com'].includes(url.hostname)) {
+    if (!['x.com', 'xcancel.com', 'twitter.com'].includes(url.hostname)) {
         return false;
     }
 
@@ -240,7 +240,7 @@ function isHandleInLinks({ urls, source }: { urls: URL[], source: Source }) {
 
     return urls
         .some(url =>
-            ['x.com', 'twitter.com'].includes(url.hostname) &&
+            ['x.com', 'xcancel.com', 'twitter.com'].includes(url.hostname) &&
             source.handlesNormalized
                 ?.some(handle => new RegExp(`^\/${handle}(\\/|\\s|$)`, 'i').test(url.pathname)));
 }
