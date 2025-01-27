@@ -18,7 +18,7 @@ function getSourceLine(source: Source) {
     const domain = domains?.at(0) ?? null;
 
     const sourceName = handle
-        ? `${name} ([@${handle}](https://twitter.com/${handle}))`
+        ? `${name} ([@${handle}](https://xcancel.com/${handle}))`
         : domain
             ? `${name} ([${domain}](https://${domain}))`
             : name;
