@@ -2,15 +2,6 @@
 
 import type { ColumnType, Selectable, Insertable, Updateable } from 'kysely';
 
-export type DBTier = 
-    'official' |
-    '1' |
-    '2' |
-    '3' |
-    '4' |
-    '5' |
-    'aggregator';
-
 export type DBSourceTier = 
     'official' |
     '1' |

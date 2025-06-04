@@ -2,7 +2,7 @@
 
 import { type InferResult } from 'kysely';
 import { jsonBuildObject } from 'kysely/helpers/postgres';
-import type { DBTier } from './db-types.js';
+import type { DBSourceTier } from './db-types.js';
 import { db } from './db.js';
 
 export const siteTiersQuery = db
@@ -89,7 +89,7 @@ export const siteUpdatesQuery = db
             })
         )
             .filterWhere('changes.type', '=', 'addition')
-            .$castTo<{ name: string, prevTier: null, nextTier: DBTier }[] | null>()
+            .$castTo<{ name: string, prevTier: null, nextTier: DBSourceTier }[] | null>()
             .as('additions'),
         eb.fn.jsonAgg(
             jsonBuildObject({
@@ -99,7 +99,7 @@ export const siteUpdatesQuery = db
             })
         )
             .filterWhere('changes.type', '=', 'removal')
-            .$castTo<{ name: string, prevTier: DBTier, nextTier: null }[] | null>()
+            .$castTo<{ name: string, prevTier: DBSourceTier, nextTier: null }[] | null>()
             .as('removals'),
         eb.fn.jsonAgg(
             jsonBuildObject({
@@ -109,7 +109,7 @@ export const siteUpdatesQuery = db
             })
         )
             .filterWhere('changes.type', '=', 'promotion')
-            .$castTo<{ name: string, prevTier: DBTier, nextTier: DBTier }[] | null>()
+            .$castTo<{ name: string, prevTier: DBSourceTier, nextTier: DBSourceTier }[] | null>()
             .as('promotions'),
         eb.fn.jsonAgg(
             jsonBuildObject({
@@ -119,7 +119,7 @@ export const siteUpdatesQuery = db
             })
         )
             .filterWhere('changes.type', '=', 'demotion')
-            .$castTo<{ name: string, prevTier: DBTier, nextTier: DBTier }[] | null>()
+            .$castTo<{ name: string, prevTier: DBSourceTier, nextTier: DBSourceTier }[] | null>()
             .as('demotions'),
     ])
     .groupBy('updates.date')
