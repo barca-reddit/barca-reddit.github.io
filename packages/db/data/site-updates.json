@@ -1,5 +1,110 @@
 [
     {
+        "date": "2025-06-03T21:00:00.000Z",
+        "additions": [
+            {
+                "name": "Alex Pintanel",
+                "prevTier": null,
+                "nextTier": "3"
+            },
+            {
+                "name": "Barca Reddit",
+                "prevTier": null,
+                "nextTier": "aggregator"
+            },
+            {
+                "name": "David Ornstein",
+                "prevTier": null,
+                "nextTier": "1"
+            }
+        ],
+        "removals": null,
+        "promotions": [
+            {
+                "name": "Adrià Albets",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "Luis Rojo",
+                "prevTier": "4",
+                "nextTier": "3"
+            },
+            {
+                "name": "Santi Ovalle",
+                "prevTier": "3",
+                "nextTier": "2"
+            },
+            {
+                "name": "Víctor Navarro",
+                "prevTier": "3",
+                "nextTier": "2"
+            }
+        ],
+        "demotions": [
+            {
+                "name": "Achraf Ben Ayad",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Albert Rogé",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Alfredo Martínez",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Chiringuito TV",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Edu Polo",
+                "prevTier": "1",
+                "nextTier": "3"
+            },
+            {
+                "name": "Fernando Polo",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Javi Miguel",
+                "prevTier": "3",
+                "nextTier": "4"
+            },
+            {
+                "name": "Jose Alvarez Haya",
+                "prevTier": "4",
+                "nextTier": "5"
+            },
+            {
+                "name": "Miguel Rico",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Ramón Fuentes",
+                "prevTier": "1",
+                "nextTier": "2"
+            },
+            {
+                "name": "Toni Juanmartí",
+                "prevTier": "2",
+                "nextTier": "3"
+            },
+            {
+                "name": "Xavi Campos",
+                "prevTier": "1",
+                "nextTier": "2"
+            }
+        ]
+    },
+    {
         "date": "2024-03-29T22:00:00.000Z",
         "additions": [
             {

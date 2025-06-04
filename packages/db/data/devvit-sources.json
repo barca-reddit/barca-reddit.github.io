@@ -1,45 +1,12 @@
 [
     {
-        "id": "6a12505f-4b52-4677-b82b-d9650d434e71",
-        "name": "Achraf Ben Ayad",
+        "id": "763a97d4-0e50-4361-b34e-9281de6f6142",
+        "name": "David Ornstein",
         "nameIsCommon": false,
         "tier": "1",
         "domains": null,
         "handles": [
-            "Benayadachraf"
-        ],
-        "aliases": null
-    },
-    {
-        "id": "f35864eb-823c-4262-85e0-51172b4a926b",
-        "name": "Albert Rogé",
-        "nameIsCommon": false,
-        "tier": "1",
-        "domains": null,
-        "handles": [
-            "albert_roge"
-        ],
-        "aliases": null
-    },
-    {
-        "id": "380d2b0f-0dc0-4f0c-8225-82f5e5bf8f65",
-        "name": "Edu Polo",
-        "nameIsCommon": false,
-        "tier": "1",
-        "domains": null,
-        "handles": [
-            "EduPolo"
-        ],
-        "aliases": null
-    },
-    {
-        "id": "89dbfd71-ffc1-4c2d-9c91-43769693487f",
-        "name": "Fernando Polo",
-        "nameIsCommon": false,
-        "tier": "1",
-        "domains": null,
-        "handles": [
-            "ffpolo"
+            "david_ornstein"
         ],
         "aliases": null
     },
@@ -55,24 +22,24 @@
         "aliases": null
     },
     {
-        "id": "a0caf81a-48af-4ae7-b55a-e6891fd1c082",
-        "name": "Ramón Fuentes",
+        "id": "6a12505f-4b52-4677-b82b-d9650d434e71",
+        "name": "Achraf Ben Ayad",
         "nameIsCommon": false,
-        "tier": "1",
+        "tier": "2",
         "domains": null,
         "handles": [
-            "ramonfuentes74"
+            "Benayadachraf"
         ],
         "aliases": null
     },
     {
-        "id": "b67fb745-5b33-449b-befd-24ec6d00ec06",
-        "name": "Xavi Campos",
+        "id": "b932675b-754b-4dcf-9ea2-e8c59fe15658",
+        "name": "Adrià Albets",
         "nameIsCommon": false,
-        "tier": "1",
+        "tier": "2",
         "domains": null,
         "handles": [
-            "xavicampos"
+            "AdriaAlbets"
         ],
         "aliases": null
     },
@@ -88,13 +55,24 @@
         "aliases": null
     },
     {
-        "id": "2cae9df4-9709-4fac-8ea0-813fe35ab86c",
-        "name": "Alfredo Martínez",
+        "id": "f35864eb-823c-4262-85e0-51172b4a926b",
+        "name": "Albert Rogé",
         "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
-            "Alfremartinezz"
+            "albert_roge"
+        ],
+        "aliases": null
+    },
+    {
+        "id": "89dbfd71-ffc1-4c2d-9c91-43769693487f",
+        "name": "Fernando Polo",
+        "nameIsCommon": false,
+        "tier": "2",
+        "domains": null,
+        "handles": [
+            "ffpolo"
         ],
         "aliases": null
     },
@@ -196,17 +174,6 @@
         "aliases": null
     },
     {
-        "id": "f9f51e7c-3858-41b3-8825-3bb53a05e3d2",
-        "name": "Miguel Rico",
-        "nameIsCommon": false,
-        "tier": "2",
-        "domains": null,
-        "handles": [
-            "MigRico"
-        ],
-        "aliases": null
-    },
-    {
         "id": "04cd40db-4da2-4166-922f-eb132769ee5e",
         "name": "Moises Llorens",
         "nameIsCommon": false,
@@ -225,6 +192,17 @@
         "domains": null,
         "handles": [
             "orioldomenech"
+        ],
+        "aliases": null
+    },
+    {
+        "id": "a0caf81a-48af-4ae7-b55a-e6891fd1c082",
+        "name": "Ramón Fuentes",
+        "nameIsCommon": false,
+        "tier": "2",
+        "domains": null,
+        "handles": [
+            "ramonfuentes74"
         ],
         "aliases": null
     },
@@ -284,6 +262,17 @@
         "aliases": null
     },
     {
+        "id": "c7e084a3-aef3-4696-a101-afe027b4092a",
+        "name": "Santi Ovalle",
+        "nameIsCommon": false,
+        "tier": "2",
+        "domains": null,
+        "handles": [
+            "santiovalle"
+        ],
+        "aliases": null
+    },
+    {
         "id": "55faf423-ac92-42aa-b953-923fd4e15c24",
         "name": "Sergi Escudero",
         "nameIsCommon": false,
@@ -295,13 +284,24 @@
         "aliases": null
     },
     {
-        "id": "b88bb9d8-1746-42ae-a4e4-d72d0ad5f82b",
-        "name": "Toni Juanmartí",
+        "id": "cffa0d13-5709-47ce-a1a7-da575f285e9e",
+        "name": "Víctor Navarro",
         "nameIsCommon": false,
         "tier": "2",
         "domains": null,
         "handles": [
-            "tjuanmarti"
+            "victor_nahe"
+        ],
+        "aliases": null
+    },
+    {
+        "id": "b67fb745-5b33-449b-befd-24ec6d00ec06",
+        "name": "Xavi Campos",
+        "nameIsCommon": false,
+        "tier": "2",
+        "domains": null,
+        "handles": [
+            "xavicampos"
         ],
         "aliases": null
     },
@@ -369,17 +369,6 @@
         "aliases": null
     },
     {
-        "id": "b932675b-754b-4dcf-9ea2-e8c59fe15658",
-        "name": "Adrià Albets",
-        "nameIsCommon": false,
-        "tier": "3",
-        "domains": null,
-        "handles": [
-            "AdriaAlbets"
-        ],
-        "aliases": null
-    },
-    {
         "id": "ab9ef0c6-a88d-4d2a-901f-f388b6821695",
         "name": "Albert Nadal",
         "nameIsCommon": false,
@@ -391,6 +380,28 @@
         "aliases": null
     },
     {
+        "id": "6083eddf-3890-4e49-91ce-85b20f33b769",
+        "name": "Alex Pintanel",
+        "nameIsCommon": false,
+        "tier": "3",
+        "domains": null,
+        "handles": [
+            "alexpintanel"
+        ],
+        "aliases": null
+    },
+    {
+        "id": "2cae9df4-9709-4fac-8ea0-813fe35ab86c",
+        "name": "Alfredo Martínez",
+        "nameIsCommon": false,
+        "tier": "3",
+        "domains": null,
+        "handles": [
+            "Alfremartinezz"
+        ],
+        "aliases": null
+    },
+    {
         "id": "f370cdf6-0a20-4ce7-9b87-151b3eb7b133",
         "name": "Anaïs Martí",
         "nameIsCommon": false,
@@ -398,6 +409,17 @@
         "domains": null,
         "handles": [
             "amartiherrero"
+        ],
+        "aliases": null
+    },
+    {
+        "id": "380d2b0f-0dc0-4f0c-8225-82f5e5bf8f65",
+        "name": "Edu Polo",
+        "nameIsCommon": false,
+        "tier": "3",
+        "domains": null,
+        "handles": [
+            "EduPolo"
         ],
         "aliases": null
     },
@@ -435,17 +457,6 @@
         "aliases": null
     },
     {
-        "id": "0e0cee43-7be9-484d-921c-e3361ce2d46d",
-        "name": "Javi Miguel",
-        "nameIsCommon": false,
-        "tier": "3",
-        "domains": null,
-        "handles": [
-            "fansjavimiguel"
-        ],
-        "aliases": null
-    },
-    {
         "id": "8a1c322f-f975-46f4-8d5c-0a241e8301a5",
         "name": "Joan Vehils",
         "nameIsCommon": false,
@@ -463,6 +474,17 @@
         "tier": "3",
         "domains": null,
         "handles": null,
+        "aliases": null
+    },
+    {
+        "id": "accfac12-bdc4-4676-af90-3c8ed26497df",
+        "name": "Luis Rojo",
+        "nameIsCommon": false,
+        "tier": "3",
+        "domains": null,
+        "handles": [
+            "Luis_F_Rojo"
+        ],
         "aliases": null
     },
     {
@@ -488,6 +510,17 @@
         "aliases": null
     },
     {
+        "id": "f9f51e7c-3858-41b3-8825-3bb53a05e3d2",
+        "name": "Miguel Rico",
+        "nameIsCommon": false,
+        "tier": "3",
+        "domains": null,
+        "handles": [
+            "MigRico"
+        ],
+        "aliases": null
+    },
+    {
         "id": "db13ed22-22ff-4dfb-8926-376d20527ca2",
         "name": "Rubén Uría",
         "nameIsCommon": false,
@@ -495,17 +528,6 @@
         "domains": null,
         "handles": [
             "rubenuria"
-        ],
-        "aliases": null
-    },
-    {
-        "id": "c7e084a3-aef3-4696-a101-afe027b4092a",
-        "name": "Santi Ovalle",
-        "nameIsCommon": false,
-        "tier": "3",
-        "domains": null,
-        "handles": [
-            "santiovalle"
         ],
         "aliases": null
     },
@@ -530,13 +552,13 @@
         "aliases": null
     },
     {
-        "id": "cffa0d13-5709-47ce-a1a7-da575f285e9e",
-        "name": "Víctor Navarro",
+        "id": "b88bb9d8-1746-42ae-a4e4-d72d0ad5f82b",
+        "name": "Toni Juanmartí",
         "nameIsCommon": false,
         "tier": "3",
         "domains": null,
         "handles": [
-            "victor_nahe"
+            "tjuanmarti"
         ],
         "aliases": null
     },
@@ -642,6 +664,17 @@
         "aliases": null
     },
     {
+        "id": "0e0cee43-7be9-484d-921c-e3361ce2d46d",
+        "name": "Javi Miguel",
+        "nameIsCommon": false,
+        "tier": "4",
+        "domains": null,
+        "handles": [
+            "fansjavimiguel"
+        ],
+        "aliases": null
+    },
+    {
         "id": "7f1485aa-afaf-44ae-bd26-566c7f727ea7",
         "name": "Jordi Blanco Duch",
         "nameIsCommon": false,
@@ -649,17 +682,6 @@
         "domains": null,
         "handles": [
             "Elwood_White"
-        ],
-        "aliases": null
-    },
-    {
-        "id": "3d4ef3db-febf-4533-bc36-0abfd3ec3eec",
-        "name": "Jose Alvarez Haya",
-        "nameIsCommon": false,
-        "tier": "4",
-        "domains": null,
-        "handles": [
-            "10JoseAlvarez"
         ],
         "aliases": null
     },
@@ -684,17 +706,6 @@
         "aliases": null
     },
     {
-        "id": "accfac12-bdc4-4676-af90-3c8ed26497df",
-        "name": "Luis Rojo",
-        "nameIsCommon": false,
-        "tier": "4",
-        "domains": null,
-        "handles": [
-            "Luis_F_Rojo"
-        ],
-        "aliases": null
-    },
-    {
         "id": "a80ef6b8-e0af-49af-9c1f-2ec5dc7d3d20",
         "name": "Quim Domènech",
         "nameIsCommon": false,
@@ -716,19 +727,6 @@
         ],
         "handles": [
             "beINSPORTS_EN"
-        ],
-        "aliases": null
-    },
-    {
-        "id": "6ccfea1c-4ea4-445a-9eb7-825e90f0cd6d",
-        "name": "Chiringuito TV",
-        "nameIsCommon": false,
-        "tier": "4",
-        "domains": [
-            "mega.atresmedia.com"
-        ],
-        "handles": [
-            "elchiringuitotv"
         ],
         "aliases": null
     },
@@ -847,6 +845,17 @@
         "aliases": null
     },
     {
+        "id": "3d4ef3db-febf-4533-bc36-0abfd3ec3eec",
+        "name": "Jose Alvarez Haya",
+        "nameIsCommon": false,
+        "tier": "5",
+        "domains": null,
+        "handles": [
+            "10JoseAlvarez"
+        ],
+        "aliases": null
+    },
+    {
         "id": "3ded6465-f992-4265-ba84-8d0a1f99cf43",
         "name": "Josep Pedrerol",
         "nameIsCommon": false,
@@ -960,6 +969,19 @@
         ],
         "handles": [
             "BILD_Sport"
+        ],
+        "aliases": null
+    },
+    {
+        "id": "6ccfea1c-4ea4-445a-9eb7-825e90f0cd6d",
+        "name": "Chiringuito TV",
+        "nameIsCommon": false,
+        "tier": "5",
+        "domains": [
+            "mega.atresmedia.com"
+        ],
+        "handles": [
+            "elchiringuitotv"
         ],
         "aliases": null
     },
@@ -1107,6 +1129,15 @@
         "handles": [
             "barcacentre"
         ],
+        "aliases": null
+    },
+    {
+        "id": "c0b2097f-a3c0-47d2-89f5-acf691458567",
+        "name": "Barca Reddit",
+        "nameIsCommon": true,
+        "tier": "aggregator",
+        "domains": null,
+        "handles": null,
         "aliases": null
     },
     {

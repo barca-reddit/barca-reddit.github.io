@@ -6,67 +6,20 @@
                 "type": "journalist",
                 "sources": [
                     {
-                        "id": "6a12505f-4b52-4677-b82b-d9650d434e71",
-                        "name": "Achraf Ben Ayad",
+                        "id": "763a97d4-0e50-4361-b34e-9281de6f6142",
+                        "name": "David Ornstein",
                         "type": "journalist",
                         "tier": "1",
                         "handles": [
-                            "Benayadachraf"
+                            "david_ornstein"
                         ],
                         "domains": null,
                         "organizations": [
-                            "Mundo Deportivo"
+                            "The Athletic",
+                            "NY Times"
                         ],
-                        "addedOn": "2019-01-01",
-                        "updatedOn": "2020-06-04"
-                    },
-                    {
-                        "id": "f35864eb-823c-4262-85e0-51172b4a926b",
-                        "name": "Albert Rogé",
-                        "type": "journalist",
-                        "tier": "1",
-                        "handles": [
-                            "albert_roge"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "Jijantes FC",
-                            "TV3",
-                            "RAC1",
-                            "Sport"
-                        ],
-                        "addedOn": "2019-06-05",
-                        "updatedOn": "2023-07-03"
-                    },
-                    {
-                        "id": "380d2b0f-0dc0-4f0c-8225-82f5e5bf8f65",
-                        "name": "Edu Polo",
-                        "type": "journalist",
-                        "tier": "1",
-                        "handles": [
-                            "EduPolo"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "FC Barcelona"
-                        ],
-                        "addedOn": "2019-01-01",
-                        "updatedOn": "2019-01-01"
-                    },
-                    {
-                        "id": "89dbfd71-ffc1-4c2d-9c91-43769693487f",
-                        "name": "Fernando Polo",
-                        "type": "journalist",
-                        "tier": "1",
-                        "handles": [
-                            "ffpolo"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "Mundo Deportivo"
-                        ],
-                        "addedOn": "2019-06-05",
-                        "updatedOn": "2023-07-03"
+                        "addedOn": "2025-06-04",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "4a153bb9-22a2-4f3f-999a-fce8f9dadf3d",
@@ -82,36 +35,6 @@
                         ],
                         "addedOn": "2021-08-05",
                         "updatedOn": "2023-07-03"
-                    },
-                    {
-                        "id": "a0caf81a-48af-4ae7-b55a-e6891fd1c082",
-                        "name": "Ramón Fuentes",
-                        "type": "journalist",
-                        "tier": "1",
-                        "handles": [
-                            "ramonfuentes74"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "Mundo Deportivo"
-                        ],
-                        "addedOn": "2023-07-03",
-                        "updatedOn": "2023-07-03"
-                    },
-                    {
-                        "id": "b67fb745-5b33-449b-befd-24ec6d00ec06",
-                        "name": "Xavi Campos",
-                        "type": "journalist",
-                        "tier": "1",
-                        "handles": [
-                            "xavicampos"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "CatRadio"
-                        ],
-                        "addedOn": "2019-01-01",
-                        "updatedOn": "2019-01-01"
                     }
                 ]
             }
@@ -123,6 +46,36 @@
             {
                 "type": "journalist",
                 "sources": [
+                    {
+                        "id": "6a12505f-4b52-4677-b82b-d9650d434e71",
+                        "name": "Achraf Ben Ayad",
+                        "type": "journalist",
+                        "tier": "2",
+                        "handles": [
+                            "Benayadachraf"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Mundo Deportivo"
+                        ],
+                        "addedOn": "2019-01-01",
+                        "updatedOn": "2025-06-04"
+                    },
+                    {
+                        "id": "b932675b-754b-4dcf-9ea2-e8c59fe15658",
+                        "name": "Adrià Albets",
+                        "type": "journalist",
+                        "tier": "2",
+                        "handles": [
+                            "AdriaAlbets"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Cadena SER"
+                        ],
+                        "addedOn": "2022-01-18",
+                        "updatedOn": "2025-06-04"
+                    },
                     {
                         "id": "01d79f41-56db-473a-80b5-1de31b646a12",
                         "name": "Adrià Soldevila",
@@ -140,19 +93,37 @@
                         "updatedOn": "2022-01-18"
                     },
                     {
-                        "id": "2cae9df4-9709-4fac-8ea0-813fe35ab86c",
-                        "name": "Alfredo Martínez",
+                        "id": "f35864eb-823c-4262-85e0-51172b4a926b",
+                        "name": "Albert Rogé",
                         "type": "journalist",
                         "tier": "2",
                         "handles": [
-                            "Alfremartinezz"
+                            "albert_roge"
                         ],
                         "domains": null,
                         "organizations": [
-                            "Onda Cero"
+                            "Jijantes FC",
+                            "TV3",
+                            "RAC1",
+                            "Sport"
                         ],
-                        "addedOn": "2019-01-01",
-                        "updatedOn": "2023-07-03"
+                        "addedOn": "2019-06-05",
+                        "updatedOn": "2025-06-04"
+                    },
+                    {
+                        "id": "89dbfd71-ffc1-4c2d-9c91-43769693487f",
+                        "name": "Fernando Polo",
+                        "type": "journalist",
+                        "tier": "2",
+                        "handles": [
+                            "ffpolo"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Mundo Deportivo"
+                        ],
+                        "addedOn": "2019-06-05",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "1c9a8249-065c-42d3-93af-5c5415062eaa",
@@ -294,21 +265,6 @@
                         "updatedOn": "2022-01-18"
                     },
                     {
-                        "id": "f9f51e7c-3858-41b3-8825-3bb53a05e3d2",
-                        "name": "Miguel Rico",
-                        "type": "journalist",
-                        "tier": "2",
-                        "handles": [
-                            "MigRico"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "Mundo Deportivo"
-                        ],
-                        "addedOn": "2019-01-01",
-                        "updatedOn": "2019-01-01"
-                    },
-                    {
                         "id": "04cd40db-4da2-4166-922f-eb132769ee5e",
                         "name": "Moises Llorens",
                         "type": "journalist",
@@ -337,6 +293,21 @@
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2020-06-04"
+                    },
+                    {
+                        "id": "a0caf81a-48af-4ae7-b55a-e6891fd1c082",
+                        "name": "Ramón Fuentes",
+                        "type": "journalist",
+                        "tier": "2",
+                        "handles": [
+                            "ramonfuentes74"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Mundo Deportivo"
+                        ],
+                        "addedOn": "2023-07-03",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "dbf61d9d-55d7-4918-a941-a0a160752a68",
@@ -415,6 +386,21 @@
                         "updatedOn": "2021-08-05"
                     },
                     {
+                        "id": "c7e084a3-aef3-4696-a101-afe027b4092a",
+                        "name": "Santi Ovalle",
+                        "type": "journalist",
+                        "tier": "2",
+                        "handles": [
+                            "santiovalle"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Cadena SER"
+                        ],
+                        "addedOn": "2022-01-18",
+                        "updatedOn": "2025-06-04"
+                    },
+                    {
                         "id": "55faf423-ac92-42aa-b953-923fd4e15c24",
                         "name": "Sergi Escudero",
                         "type": "journalist",
@@ -430,19 +416,34 @@
                         "updatedOn": "2022-01-18"
                     },
                     {
-                        "id": "b88bb9d8-1746-42ae-a4e4-d72d0ad5f82b",
-                        "name": "Toni Juanmartí",
+                        "id": "cffa0d13-5709-47ce-a1a7-da575f285e9e",
+                        "name": "Víctor Navarro",
                         "type": "journalist",
                         "tier": "2",
                         "handles": [
-                            "tjuanmarti"
+                            "victor_nahe"
                         ],
                         "domains": null,
                         "organizations": [
-                            "Sport"
+                            "Cadena COPE"
                         ],
-                        "addedOn": "2021-08-05",
-                        "updatedOn": "2023-07-03"
+                        "addedOn": "2022-01-18",
+                        "updatedOn": "2025-06-04"
+                    },
+                    {
+                        "id": "b67fb745-5b33-449b-befd-24ec6d00ec06",
+                        "name": "Xavi Campos",
+                        "type": "journalist",
+                        "tier": "2",
+                        "handles": [
+                            "xavicampos"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "CatRadio"
+                        ],
+                        "addedOn": "2019-01-01",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "a7092100-7049-483c-96db-7f2499db3518",
@@ -535,21 +536,6 @@
                 "type": "journalist",
                 "sources": [
                     {
-                        "id": "b932675b-754b-4dcf-9ea2-e8c59fe15658",
-                        "name": "Adrià Albets",
-                        "type": "journalist",
-                        "tier": "3",
-                        "handles": [
-                            "AdriaAlbets"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "Cadena SER"
-                        ],
-                        "addedOn": "2022-01-18",
-                        "updatedOn": "2023-07-03"
-                    },
-                    {
                         "id": "ab9ef0c6-a88d-4d2a-901f-f388b6821695",
                         "name": "Albert Nadal",
                         "type": "journalist",
@@ -563,6 +549,37 @@
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
+                    },
+                    {
+                        "id": "6083eddf-3890-4e49-91ce-85b20f33b769",
+                        "name": "Alex Pintanel",
+                        "type": "journalist",
+                        "tier": "3",
+                        "handles": [
+                            "alexpintanel"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "RAC1",
+                            "Jijantes FC"
+                        ],
+                        "addedOn": "2025-06-04",
+                        "updatedOn": "2025-06-04"
+                    },
+                    {
+                        "id": "2cae9df4-9709-4fac-8ea0-813fe35ab86c",
+                        "name": "Alfredo Martínez",
+                        "type": "journalist",
+                        "tier": "3",
+                        "handles": [
+                            "Alfremartinezz"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Onda Cero"
+                        ],
+                        "addedOn": "2019-01-01",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "f370cdf6-0a20-4ce7-9b87-151b3eb7b133",
@@ -581,6 +598,21 @@
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
+                    },
+                    {
+                        "id": "380d2b0f-0dc0-4f0c-8225-82f5e5bf8f65",
+                        "name": "Edu Polo",
+                        "type": "journalist",
+                        "tier": "3",
+                        "handles": [
+                            "EduPolo"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "FC Barcelona"
+                        ],
+                        "addedOn": "2019-01-01",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "2206f4ea-3efd-42b7-81d9-194d8a8b12e3",
@@ -628,23 +660,6 @@
                         "updatedOn": "2022-01-18"
                     },
                     {
-                        "id": "0e0cee43-7be9-484d-921c-e3361ce2d46d",
-                        "name": "Javi Miguel",
-                        "type": "journalist",
-                        "tier": "3",
-                        "handles": [
-                            "fansjavimiguel"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "AS",
-                            "CatRadio",
-                            "El Chiringuito"
-                        ],
-                        "addedOn": "2020-06-04",
-                        "updatedOn": "2022-01-18"
-                    },
-                    {
                         "id": "8a1c322f-f975-46f4-8d5c-0a241e8301a5",
                         "name": "Joan Vehils",
                         "type": "journalist",
@@ -671,6 +686,21 @@
                         ],
                         "addedOn": "2019-06-05",
                         "updatedOn": "2022-01-07"
+                    },
+                    {
+                        "id": "accfac12-bdc4-4676-af90-3c8ed26497df",
+                        "name": "Luis Rojo",
+                        "type": "journalist",
+                        "tier": "3",
+                        "handles": [
+                            "Luis_F_Rojo"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Marca"
+                        ],
+                        "addedOn": "2022-01-18",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "b976b84e-d336-41af-baab-2fcc820f92fc",
@@ -703,6 +733,21 @@
                         "updatedOn": "2022-01-18"
                     },
                     {
+                        "id": "f9f51e7c-3858-41b3-8825-3bb53a05e3d2",
+                        "name": "Miguel Rico",
+                        "type": "journalist",
+                        "tier": "3",
+                        "handles": [
+                            "MigRico"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "Mundo Deportivo"
+                        ],
+                        "addedOn": "2019-01-01",
+                        "updatedOn": "2025-06-04"
+                    },
+                    {
                         "id": "db13ed22-22ff-4dfb-8926-376d20527ca2",
                         "name": "Rubén Uría",
                         "type": "journalist",
@@ -717,21 +762,6 @@
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
-                    },
-                    {
-                        "id": "c7e084a3-aef3-4696-a101-afe027b4092a",
-                        "name": "Santi Ovalle",
-                        "type": "journalist",
-                        "tier": "3",
-                        "handles": [
-                            "santiovalle"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "Cadena SER"
-                        ],
-                        "addedOn": "2022-01-18",
-                        "updatedOn": "2023-07-03"
                     },
                     {
                         "id": "de137761-cb4d-447e-937e-40afd5ffaa4d",
@@ -762,19 +792,19 @@
                         "updatedOn": "2023-07-03"
                     },
                     {
-                        "id": "cffa0d13-5709-47ce-a1a7-da575f285e9e",
-                        "name": "Víctor Navarro",
+                        "id": "b88bb9d8-1746-42ae-a4e4-d72d0ad5f82b",
+                        "name": "Toni Juanmartí",
                         "type": "journalist",
                         "tier": "3",
                         "handles": [
-                            "victor_nahe"
+                            "tjuanmarti"
                         ],
                         "domains": null,
                         "organizations": [
-                            "Cadena COPE"
+                            "Sport"
                         ],
-                        "addedOn": "2022-01-18",
-                        "updatedOn": "2022-01-18"
+                        "addedOn": "2021-08-05",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "f59911a6-38c0-4df5-bbaf-cf06e245f459",
@@ -912,6 +942,23 @@
                         "updatedOn": "2019-01-01"
                     },
                     {
+                        "id": "0e0cee43-7be9-484d-921c-e3361ce2d46d",
+                        "name": "Javi Miguel",
+                        "type": "journalist",
+                        "tier": "4",
+                        "handles": [
+                            "fansjavimiguel"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "AS",
+                            "CatRadio",
+                            "El Chiringuito"
+                        ],
+                        "addedOn": "2020-06-04",
+                        "updatedOn": "2025-06-04"
+                    },
+                    {
                         "id": "7f1485aa-afaf-44ae-bd26-566c7f727ea7",
                         "name": "Jordi Blanco Duch",
                         "type": "journalist",
@@ -922,21 +969,6 @@
                         "domains": null,
                         "organizations": [
                             "ESPN"
-                        ],
-                        "addedOn": "2022-01-18",
-                        "updatedOn": "2022-01-18"
-                    },
-                    {
-                        "id": "3d4ef3db-febf-4533-bc36-0abfd3ec3eec",
-                        "name": "Jose Alvarez Haya",
-                        "type": "journalist",
-                        "tier": "4",
-                        "handles": [
-                            "10JoseAlvarez"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "El Chiringuito"
                         ],
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
@@ -968,21 +1000,6 @@
                         ],
                         "addedOn": "2023-07-03",
                         "updatedOn": "2023-07-03"
-                    },
-                    {
-                        "id": "accfac12-bdc4-4676-af90-3c8ed26497df",
-                        "name": "Luis Rojo",
-                        "type": "journalist",
-                        "tier": "4",
-                        "handles": [
-                            "Luis_F_Rojo"
-                        ],
-                        "domains": null,
-                        "organizations": [
-                            "Marca"
-                        ],
-                        "addedOn": "2022-01-18",
-                        "updatedOn": "2022-01-18"
                     },
                     {
                         "id": "a80ef6b8-e0af-49af-9c1f-2ec5dc7d3d20",
@@ -1019,21 +1036,6 @@
                         "organizations": null,
                         "addedOn": "2022-01-18",
                         "updatedOn": "2022-01-18"
-                    },
-                    {
-                        "id": "6ccfea1c-4ea4-445a-9eb7-825e90f0cd6d",
-                        "name": "Chiringuito TV",
-                        "type": "media",
-                        "tier": "4",
-                        "handles": [
-                            "elchiringuitotv"
-                        ],
-                        "domains": [
-                            "mega.atresmedia.com"
-                        ],
-                        "organizations": null,
-                        "addedOn": "2020-06-04",
-                        "updatedOn": "2020-06-04"
                     },
                     {
                         "id": "f762e077-8ddd-43c6-910d-8ce4fe112c12",
@@ -1180,6 +1182,21 @@
                         ],
                         "addedOn": "2020-06-04",
                         "updatedOn": "2020-06-04"
+                    },
+                    {
+                        "id": "3d4ef3db-febf-4533-bc36-0abfd3ec3eec",
+                        "name": "Jose Alvarez Haya",
+                        "type": "journalist",
+                        "tier": "5",
+                        "handles": [
+                            "10JoseAlvarez"
+                        ],
+                        "domains": null,
+                        "organizations": [
+                            "El Chiringuito"
+                        ],
+                        "addedOn": "2022-01-18",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "3ded6465-f992-4265-ba84-8d0a1f99cf43",
@@ -1337,6 +1354,21 @@
                         "organizations": null,
                         "addedOn": "2019-01-01",
                         "updatedOn": "2019-06-05"
+                    },
+                    {
+                        "id": "6ccfea1c-4ea4-445a-9eb7-825e90f0cd6d",
+                        "name": "Chiringuito TV",
+                        "type": "media",
+                        "tier": "5",
+                        "handles": [
+                            "elchiringuitotv"
+                        ],
+                        "domains": [
+                            "mega.atresmedia.com"
+                        ],
+                        "organizations": null,
+                        "addedOn": "2020-06-04",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "08ab4848-9fcf-425f-924a-0cf09eb99dcd",
@@ -1517,6 +1549,17 @@
                         "organizations": null,
                         "addedOn": "2021-08-05",
                         "updatedOn": "2021-08-05"
+                    },
+                    {
+                        "id": "c0b2097f-a3c0-47d2-89f5-acf691458567",
+                        "name": "Barca Reddit",
+                        "type": "aggregator",
+                        "tier": "aggregator",
+                        "handles": null,
+                        "domains": null,
+                        "organizations": null,
+                        "addedOn": "2025-06-04",
+                        "updatedOn": "2025-06-04"
                     },
                     {
                         "id": "af354276-7e3b-4eec-9469-e2048a1c98ef",
