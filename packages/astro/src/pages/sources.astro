@@ -1,0 +1,42 @@
+---
+import type { DBSource } from '@repo/schemas';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+import SourceList from '../components/SourceList.astro';
+import Layout from '../layouts/Layout.astro';
+import { getTierDescription, getTierTitle } from '../util/helpers.ts';
+import { organizeSources } from '../util/transformers.ts';
+
+const res = await fetch('https://media-reliability.barcareddit.workers.dev/db/sources');
+const data = (await res.json()) as DBSource[];
+const tiers = organizeSources(data);
+---
+
+<Layout>
+    <Navbar page='sources' />
+    <main class='flex grow flex-col py-4'>
+        {
+            tiers.map(tier => (
+                <div class='border-primary flex items-center border-b py-8 last:border-0'>
+                    <div class='sticky top-4 flex flex-1 flex-col self-start sm:static sm:top-0'>
+                        <h2 class='text-2xl font-medium tracking-tighter'>
+                            {getTierTitle(tier.tier)}
+                        </h2>
+                        <span class='text-secondary text-sm'>{getTierDescription(tier.tier)}</span>
+                    </div>
+                    <div
+                        class={`
+                            flex flex-[3] flex-col flex-wrap items-stretch justify-center gap-8
+                            sm:flex-row
+                        `}
+                    >
+                        {tier.data.map(data => (
+                            <SourceList data={data} />
+                        ))}
+                    </div>
+                </div>
+            ))
+        }
+    </main>
+    <Footer />
+</Layout>

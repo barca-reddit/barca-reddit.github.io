@@ -1,11 +1,6 @@
 import type { PostCreate } from '@devvit/protos';
 import type { Post } from '@devvit/public-api';
-import type { z } from 'zod';
-import type { processPost } from './index.js';
-import type { settingsSchema, sourceSchema } from './schema.js';
-
-export type AppSettings = z.infer<typeof settingsSchema>;
-export type Source = z.infer<typeof sourceSchema>;
+import type { processPost } from './helpers.js';
 
 export type RedditPostV1 = Post;
 export type RedditPostV2 = Exclude<PostCreate['post'], undefined>;

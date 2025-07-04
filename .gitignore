@@ -3,10 +3,15 @@ node_modules/
 
 # env files
 .env
+.env.production
+.dev.vars
 
 # build artifacts
 packages/**/dist/
 packages/**/out/
 
 # other
+.wrangler/
+.astro/
 todo.md
+_note.md

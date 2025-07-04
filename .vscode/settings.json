@@ -4,8 +4,12 @@
     "css.lint.unknownAtRules": "ignore",
     "typescript.tsdk": "node_modules/typescript/lib",
     "files.exclude": {
+        "**/.astro": true,
         "**/node_modules": true,
-        "**/dist": false,
+        "**/dist": true,
         "**/out": true
+    },
+    "files.associations": {
+        "wrangler.json": "jsonc"
     }
 }

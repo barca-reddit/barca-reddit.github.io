@@ -1,0 +1,132 @@
+---
+import '../styles/global.css';
+import { ClientRouter } from 'astro:transitions';
+---
+
+<!doctype html>
+<html lang='en'>
+    <head>
+        <script is:inline>
+            /**
+             * Because the script is:inline, it will be put on top of the <head> tag
+             * and will run before the page is loaded.
+             *
+             * Because the script does not have data-astro-rerun, it will not be rerun
+             * when the page is swapped in.
+             *
+             * The event listener for astro:before-swap will be added to the document
+             * when the page is swapped in, so it will run after the page is loaded.
+             *
+             * Effectively, this means that the script will run once when the page is
+             * initially loaded, and the only code that re-executes is the one in the
+             * event listener, but the entire <script> only runs once.
+             *
+             * NB: Using is:inline here to prevent FOUC for dark/light mode.
+             * If we use normal script tag (bundling), it might load too slow
+             */
+
+            // this will run when the page is initially loaded
+            function setTheme(document) {
+                const theme = window.localStorage.getItem('theme');
+
+                if (theme) {
+                    document.documentElement.classList.add(theme);
+                } else {
+                    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                        window.localStorage.setItem('theme', 'dark');
+                        document.documentElement.classList.add('dark');
+                    } else {
+                        window.localStorage.setItem('theme', 'light');
+                        document.documentElement.classList.add('light');
+                    }
+                }
+            }
+
+            setTheme(document);
+
+            /**
+             * This section only runs when the page is swapped in.
+             */
+            document.addEventListener('astro:before-swap', event => {
+                setTheme(event.newDocument);
+            });
+        </script>
+        <meta charset='UTF-8' />
+        <meta
+            content='width=device-width, initial-scale=1.0'
+            name='viewport'
+        />
+
+        <link
+            href='crest.png'
+            rel='icon'
+            type='image/png'
+        />
+        <!-- Open Graph -->
+        <meta
+            content='A community updated journalist and media reliability guide and tier list.'
+            name='description'
+        />
+        <meta
+            content='https://barca-reddit.github.io/preview.png'
+            name='image'
+        />
+        <meta
+            content='barca-reddit.github.io - media reliability guide'
+            property='og:title'
+        />
+        <meta
+            content='website'
+            property='og:type'
+        />
+        <meta
+            content='https://barca-reddit.github.io'
+            property='og:url'
+        />
+        <meta
+            content='https://barca-reddit.github.io/preview.png'
+            property='og:image'
+        />
+        <meta
+            content='A community updated journalist and media reliability guide and tier list.'
+            property='og:description'
+        />
+        <meta
+            content='summary_large_image'
+            name='twitter:card'
+        />
+        <meta
+            content='A community updated journalist and media reliability guide and tier list.'
+            name='twitter:description'
+        />
+        <meta
+            content='https://barca-reddit.github.io/preview.png'
+            name='twitter:image'
+        />
+        <!-- Open Graph -->
+        <meta
+            content={Astro.generator}
+            name='generator'
+        />
+        <title>r/barca media reliability guide (v2)</title>
+        <script
+            data-goatcounter='https://barca-reddit.goatcounter.com/count'
+            src='//gc.zgo.at/count.js'
+            async
+            is:inline
+        ></script>
+        <ClientRouter />
+    </head>
+    <body class='bg-primary text-primary overflow-y-scroll'>
+        <div
+            class={`
+                mx-auto flex min-h-screen max-w-screen-lg flex-col items-stretch justify-start px-4
+                font-rubik text-[16px]
+            `}
+        >
+            <slot />
+        </div>
+    </body>
+</html>
+
+<script></script>

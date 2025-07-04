@@ -1,5 +1,7 @@
 import { Devvit } from '@devvit/public-api';
-import { findSourcesInPost, getAllSettings, isIgnoredUser, processPost, submitComment, trySendPostErrorModmail, validateSetting } from './index.js';
+import { submitComment } from './comment.js';
+import { getAllSettings, isIgnoredUser, processPost, trySendPostErrorModmail, validateSetting } from './helpers.js';
+import { findSourcesInPost } from './matcher.js';
 
 Devvit.configure({ redditAPI: true });
 

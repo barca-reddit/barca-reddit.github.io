@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { normalizeText } from '../src/index.js';
+import { normalizeText } from '../src/helpers.js';
 import { __test__ } from '../src/matcher.js';
 import { createSource, expectEntries } from './helpers.js';
 
@@ -202,7 +202,16 @@ describe('handles', () => {
                 [true, 'title which includes [handle2]'],
                 [true, 'title which includes @handle2'],
             ],
-            createSource({ handles: ['handle1', 'handle2'] }),
+            createSource({
+                handles: [{
+                    handle: 'handle1',
+                    platform: 'x'
+                },
+                {
+                    handle: 'handle2',
+                    platform: 'bsky'
+                }]
+            }),
             ({ source, content }) => isHandleInTitle({ source, titleNormalized: normalizeText(content) })
         );
     });
@@ -213,23 +222,32 @@ describe('handles', () => {
                 [true, new URL('https://twitter.com/handle1')],
                 [true, new URL('https://twitter.com/handle1/')],
                 [true, new URL('https://twitter.com/handle1/status/12345')],
-                [true, new URL('https://twitter.com/handle2')],
-                [true, new URL('https://twitter.com/handle2/')],
-                [true, new URL('https://twitter.com/handle2/status/12345')],
                 [true, new URL('https://x.com/handle1')],
                 [true, new URL('https://x.com/handle1/')],
                 [true, new URL('https://x.com/handle1/status/12345')],
-                [true, new URL('https://x.com/handle2')],
-                [true, new URL('https://x.com/handle2/')],
-                [true, new URL('https://x.com/handle2/status/12345')],
-                [false, new URL('https://example.com/handle1')],
-                [false, new URL('https://example.com/handle1/')],
-                [false, new URL('https://example.com/handle1/status/12345')],
-                [false, new URL('https://example.com/handle2')],
-                [false, new URL('https://example.com/handle2/')],
-                [false, new URL('https://example.com/handle2/status/12345')],
+                [true, new URL('https://bsky.app/profile/handle2')],
+                [true, new URL('https://bsky.app/profile/handle2/')],
+                [true, new URL('https://bsky.app/profile/handle2/status/12345')],
+                [false, new URL('https://twitter.com/handle2')],
+                [false, new URL('https://twitter.com/handle2/')],
+                [false, new URL('https://twitter.com/handle2/status/12345')],
+                [false, new URL('https://x.com/handle2')],
+                [false, new URL('https://x.com/handle2/')],
+                [false, new URL('https://x.com/handle2/status/12345')],
+                [false, new URL('https://bsky.app/profile/handle1')],
+                [false, new URL('https://bsky.app/profile/handle1/')],
+                [false, new URL('https://bsky.app/profile/handle1/status/12345')],
             ],
-            createSource({ handles: ['handle1', 'handle2'] }),
+            createSource({
+                handles: [{
+                    handle: 'handle1',
+                    platform: 'x'
+                },
+                {
+                    handle: 'handle2',
+                    platform: 'bsky'
+                },]
+            }),
             ({ source, content }) => isHandleInUrl({ source, url: content })
         );
     });
@@ -240,19 +258,29 @@ describe('handles', () => {
                 [true, [new URL('https://x.com/handle1')]],
                 [true, [new URL('https://x.com/handle1/')]],
                 [true, [new URL('https://x.com/handle1/path')]],
-                [true, [new URL('https://x.com/handle2')]],
-                [true, [new URL('https://x.com/handle2/')]],
-                [true, [new URL('https://x.com/handle2/path')]],
+                [true, [new URL('https://bsky.app/profile/handle2')]],
+                [true, [new URL('https://bsky.app/profile/handle2/')]],
+                [true, [new URL('https://bsky.app/profile/handle2/path')]],
                 [true, [new URL('https://ignored.com/handle1'), new URL('https://x.com/handle1')]],
                 [true, [new URL('https://ignored.com/handle1'), new URL('https://x.com/handle1/')]],
                 [true, [new URL('https://ignored.com/handle1'), new URL('https://x.com/handle1/path')]],
-                [true, [new URL('https://ignored.com/handle1'), new URL('https://x.com/handle2')]],
-                [true, [new URL('https://ignored.com/handle1'), new URL('https://x.com/handle2/')]],
-                [true, [new URL('https://ignored.com/handle1'), new URL('https://x.com/handle2/path')]],
+                [true, [new URL('https://ignored.com/handle1'), new URL('https://bsky.app/profile/handle2')]],
+                [true, [new URL('https://ignored.com/handle1'), new URL('https://bsky.app/profile/handle2/')]],
+                [true, [new URL('https://ignored.com/handle1'), new URL('https://bsky.app/profile/handle2/path')]],
+                [false, [new URL('https://x.com/handle2'), new URL('https://bsky.app/profile/handle1/path')]],
                 [false, [new URL('https://x.com/status/handle1')]],
                 [false, [new URL('https://twitter.com/handle123')]],
             ],
-            createSource({ handles: ['handle1', 'handle2'] }),
+            createSource({
+                handles: [{
+                    handle: 'handle1',
+                    platform: 'x'
+                },
+                {
+                    handle: 'handle2',
+                    platform: 'bsky'
+                }]
+            }),
             ({ source, content }) => isHandleInLinks({ source, urls: content })
         );
     });
@@ -276,7 +304,16 @@ describe('handles', () => {
                 [false, 'body which includes handle1'],
                 [false, 'body which includes handle2'],
             ],
-            createSource({ handles: ['handle1', 'handle2'] }),
+            createSource({
+                handles: [{
+                    handle: 'handle1',
+                    platform: 'x'
+                },
+                {
+                    handle: 'handle2',
+                    platform: 'bsky'
+                }]
+            }),
             ({ source, content }) => isHandleInBody({ source, bodyNormalized: normalizeText(content) })
         );
     });

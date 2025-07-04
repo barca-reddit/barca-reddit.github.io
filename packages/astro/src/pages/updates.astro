@@ -1,0 +1,46 @@
+---
+import type { DBUpdate } from '@repo/schemas';
+import Footer from '../components/Footer.astro';
+import Navbar from '../components/Navbar.astro';
+import UpdateList from '../components/UpdateList.astro';
+import Layout from '../layouts/Layout.astro';
+import { dayjs } from '../util/dayjs.ts';
+import { organizeUpdates } from '../util/transformers.ts';
+
+const res = await fetch('https://media-reliability.barcareddit.workers.dev/db/updates');
+const data = (await res.json()) as DBUpdate[];
+const updates = organizeUpdates(data);
+---
+
+<Layout>
+    <Navbar page='updates' />
+    <main class='flex grow flex-col py-12'>
+        <h1 class='mb-9 text-left text-2xl font-medium tracking-tighter'>Tier updates</h1>
+        <div class='relative flex flex-col'>
+            {
+                updates.map(updateList => (
+                    <div
+                        class={`
+                            border-primary flex flex-col items-stretch border-b py-8 first:pt-0
+                            last:border-0 sm:flex-row
+                        `}
+                    >
+                        <div class='flex flex-col self-start sm:sticky sm:top-4 sm:w-32'>
+                            <h2 class='hidden text-2xl font-medium tracking-tighter sm:block'>
+                                {dayjs(updateList.date).year()}
+                            </h2>
+                            <span class='text-secondary hidden text-sm sm:block'>
+                                {dayjs(updateList.date).format('MMM Do')}
+                            </span>
+                            <h3 class='mb-4 text-2xl font-medium tracking-tighter sm:hidden'>
+                                {dayjs(updateList.date).format('MMM Do, YYYY')}
+                            </h3>
+                        </div>
+                        <UpdateList updateList={updateList} />
+                    </div>
+                ))
+            }
+        </div>
+    </main>
+    <Footer />
+</Layout>

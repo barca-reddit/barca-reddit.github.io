@@ -1,0 +1,60 @@
+---
+import { dbMetaSchema } from '@repo/schemas';
+import { Icon } from 'astro-icon/components';
+import { dayjs } from '../util/dayjs.ts';
+
+const res = await fetch('https://media-reliability.barcareddit.workers.dev/db/meta');
+const meta = dbMetaSchema.parse(await res.json());
+---
+
+<footer
+    class={`
+        border-primary flex flex-col items-center justify-between gap-4 border-t py-8 sm:flex-row
+    `}
+    transition:persist
+>
+    <div class='flex'>
+        <span>Last update on {dayjs(meta.lastUpdate).format('Do MMM, YYYY')}</span>
+    </div>
+    <ul class='flex items-center gap-2'>
+        <li>
+            <a
+                class='flex items-center gap-2'
+                href='https://github.com/barca-reddit/barca-reddit.github.io'
+                target='_blank'
+            >
+                <span>Github</span>
+                <Icon
+                    class='size-4'
+                    name='fa6-brands-github'
+                />
+            </a>
+        </li>
+        <li>
+            <a
+                class='flex items-center gap-2'
+                href='https://reddit.com/r/barca'
+                target='_blank'
+            >
+                <span>Reddit</span>
+                <Icon
+                    class='size-4'
+                    name='fa6-brands-reddit'
+                />
+            </a>
+        </li>
+        <li>
+            <a
+                class='flex items-center gap-2'
+                href='https://discord.gg/invite/6GPhE3mE7p'
+                target='_blank'
+            >
+                <span>Discord</span>
+                <Icon
+                    class='size-4'
+                    name='fa6-brands-discord'
+                />
+            </a>
+        </li>
+    </ul>
+</footer>

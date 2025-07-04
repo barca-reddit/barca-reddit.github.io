@@ -1,24 +1,22 @@
 import type { TriggerContext } from '@devvit/public-api';
+import type { DevvitSettings, DevvitSource } from '@repo/schemas';
 import { getTierDetails, getTierFlairId } from './helpers.js';
-import type { AppSettings, PostData, Source } from './types.js';
+import type { PostData } from './types.js';
 
-
-type HandleFlairProps = {
-    postData: PostData;
-    settings: AppSettings;
-    sources: Source[];
-    context: TriggerContext;
-};
-
-function getSourceLine(source: Source) {
+function getSourceLine(source: DevvitSource) {
     const { name, handles, tier, domains } = source;
     const { commentText, reliabilityText } = getTierDetails(tier);
 
-    const handle = handles?.at(0) ?? null;
-    const domain = domains?.at(0) ?? null;
+    const handle = handles !== null && handles.length > 0
+        ? handles[0]
+        : null;
+
+    const domain = domains !== null && domains.length > 0
+        ? domains[0]
+        : null;
 
     const sourceName = handle
-        ? `${name} ([@${handle}](https://xcancel.com/${handle}))`
+        ? `${name} ([@${handle.handle}](https://${handle.platform === 'x' ? 'xcancel.com' : 'bsky.app/profile'}/${handle.handle}))`
         : domain
             ? `${name} ([${domain}](https://${domain}))`
             : name;
@@ -26,10 +24,10 @@ function getSourceLine(source: Source) {
     return `**${commentText}**: ${sourceName}${reliabilityText ? ` - ${reliabilityText}` : ''}`;
 }
 
-type SubmitCommentProps = {
+type HandleFlairProps = {
     postData: PostData;
-    sources: Source[];
-    settings: AppSettings;
+    settings: DevvitSettings;
+    sources: DevvitSource[];
     context: TriggerContext;
 };
 
@@ -64,6 +62,13 @@ async function handleFlair({ postData, sources, settings, context }: HandleFlair
         ...settings.flairCssClass && { cssClass: settings.flairCssClass },
     });
 }
+
+type SubmitCommentProps = {
+    postData: PostData;
+    sources: DevvitSource[];
+    settings: DevvitSettings;
+    context: TriggerContext;
+};
 
 export async function submitComment({ postData, sources, settings, context }: SubmitCommentProps) {
     await handleFlair({ postData, sources, settings, context });

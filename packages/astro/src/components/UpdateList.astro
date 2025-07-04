@@ -1,0 +1,44 @@
+---
+import type { UpdateData } from '../util/transformers.ts';
+import UpdateEntry from './UpdateEntries.astro';
+
+interface Props {
+    updateList: UpdateData;
+}
+const { updateList }: Props = Astro.props;
+---
+
+<div class='flex flex-1 flex-col gap-4'>
+    {
+        updateList.promotions && updateList.promotions.length > 0 ? (
+            <UpdateEntry
+                type='Promotions'
+                updateList={updateList.promotions}
+            />
+        ) : null
+    }
+    {
+        updateList.demotions && updateList.demotions.length > 0 ? (
+            <UpdateEntry
+                type='Demotions'
+                updateList={updateList.demotions}
+            />
+        ) : null
+    }
+    {
+        updateList.additions && updateList.additions.length > 0 ? (
+            <UpdateEntry
+                type='Additions'
+                updateList={updateList.additions}
+            />
+        ) : null
+    }
+    {
+        updateList.removals && updateList.removals.length > 0 ? (
+            <UpdateEntry
+                type='Removals'
+                updateList={updateList.removals}
+            />
+        ) : null
+    }
+</div>

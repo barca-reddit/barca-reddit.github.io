@@ -1,0 +1,141 @@
+---
+import { clsx } from 'clsx';
+import type { TierTypeData } from '../util/transformers.ts';
+import SourceCard from './SourceCard.astro';
+
+interface Props {
+    data: TierTypeData;
+}
+
+const { data } = Astro.props;
+---
+
+<div
+    class={clsx(
+        `flex grow flex-col flex-wrap items-end justify-end sm:flex-row`,
+        data.type === 'journalist' ? 'gap-4' : 'gap-2'
+    )}
+>
+    {
+        data.sources.map((source, index) => (
+            <SourceCard
+                data={source}
+                index={index + 1}
+            />
+        ))
+    }
+</div>
+
+<script>
+    function showTooltip(tooltip: HTMLElement) {
+        tooltip.classList.remove('hidden');
+        tooltip.classList.add('flex');
+    }
+
+    function hideTooltip(tooltip: HTMLElement) {
+        tooltip.classList.remove('flex');
+        tooltip.classList.add('hidden');
+    }
+
+    function setPosition(container: HTMLElement, item: HTMLElement, tooltip: HTMLElement) {
+        const containerRect = container.getBoundingClientRect();
+        const itemRect = item.getBoundingClientRect();
+        const tooltipRect = tooltip.getBoundingClientRect();
+
+        const overflowsContainer = containerRect.bottom - itemRect.bottom < tooltipRect.height;
+        const overflowsScreenEdge = itemRect.y + tooltipRect.height > window.innerHeight;
+
+        const top = overflowsContainer || overflowsScreenEdge ? `-${tooltipRect.height}px` : '100%';
+
+        let left = `calc(50% - ${tooltipRect.width / 2}px)`;
+
+        if (tooltipRect.width > itemRect.width) {
+            const spaceRight = containerRect.right - itemRect.right;
+            const tooltipSideWidth = (tooltipRect.width - itemRect.width) / 2;
+
+            if (spaceRight < tooltipSideWidth) {
+                left = `-${tooltipRect.width - (spaceRight + itemRect.width)}px`;
+            }
+        }
+
+        tooltip.style.top = top;
+        tooltip.style.left = left;
+    }
+
+    document.addEventListener('astro:page-load', () => {
+        const container = document.querySelector('main') as HTMLDivElement;
+        const buttons = document.querySelectorAll<HTMLButtonElement>('button[data-source-id]');
+        let timeout: ReturnType<typeof setTimeout> | undefined = undefined;
+
+        for (const button of buttons) {
+            const sourceId = button.dataset.sourceId;
+            const tooltip = button.querySelector('[data-tooltip]') as HTMLElement;
+
+            container.addEventListener('pointerup', (e: PointerEvent) => {
+                if (
+                    e.target instanceof HTMLElement &&
+                    e.target.closest(`[data-source-id="${sourceId}"]`)
+                ) {
+                    return;
+                }
+                hideTooltip(tooltip);
+            });
+
+            button.addEventListener('pointerover', (e: PointerEvent) => {
+                if (e.pointerType !== 'mouse') {
+                    return;
+                }
+
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+
+                timeout = setTimeout(() => {
+                    showTooltip(tooltip);
+                    setPosition(container, button, tooltip);
+                }, 300);
+            });
+
+            button.addEventListener('pointerleave', (e: PointerEvent) => {
+                if (e.pointerType !== 'mouse') {
+                    return;
+                }
+
+                if (timeout) {
+                    clearTimeout(timeout);
+                }
+
+                hideTooltip(tooltip);
+            });
+
+            button.addEventListener('pointerup', () => {
+                showTooltip(tooltip);
+                setPosition(container, button, tooltip);
+            });
+
+            button.addEventListener('pointercancel', () => {
+                hideTooltip(tooltip);
+            });
+
+            button.addEventListener('focusin', () => {
+                showTooltip(tooltip);
+                setPosition(container, button, tooltip);
+            });
+
+            button.addEventListener('focusout', (e: FocusEvent) => {
+                const { currentTarget, relatedTarget } = e;
+
+                if (
+                    !(currentTarget instanceof HTMLElement) ||
+                    !(relatedTarget instanceof HTMLElement)
+                ) {
+                    return;
+                }
+
+                if (!currentTarget.contains(relatedTarget)) {
+                    hideTooltip(tooltip);
+                }
+            });
+        }
+    });
+</script>

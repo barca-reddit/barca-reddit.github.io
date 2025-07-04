@@ -1,0 +1,94 @@
+---
+import IconMoon from '../assets/icons/ph-moon-stars-bold.svg';
+import IconSun from '../assets/icons/ph-sun-bold.svg';
+import FCBCrest from '../assets/site/crest.png';
+import { Image } from 'astro:assets';
+
+interface Props {
+    page: 'sources' | 'updates' | 'tiers' | 'about';
+}
+
+const { page } = Astro.props;
+---
+
+<nav
+    class={`
+        border-primary flex flex-col items-center justify-between gap-4 border-b py-8 md:flex-row
+    `}
+>
+    <a
+        class='flex cursor-pointer items-center gap-2'
+        href='/'
+    >
+        <Image
+            alt='FC Barcelona crest'
+            class='size-10'
+            src={FCBCrest}
+        />
+        <h1 class='text-left text-2xl font-medium tracking-tighter'>
+            r/barca media reliability guide
+        </h1>
+    </a>
+    <div class='flex items-center gap-4'>
+        <ul class='text-secondary border-primary flex items-center gap-4 font-medium'>
+            <li class='flex items-center'>
+                <a
+                    class={page === 'sources' ? 'text-primary' : ''}
+                    href='/sources'
+                    >Sources</a
+                >
+            </li>
+            <li class='flex items-center'>
+                <a
+                    class={page === 'updates' ? 'text-primary' : ''}
+                    href='/updates'
+                    >Updates</a
+                >
+            </li>
+            <li class='flex items-center'>
+                <a
+                    class={page === 'tiers' ? 'text-primary' : ''}
+                    href='/tiers'
+                    >Tiers</a
+                >
+            </li>
+            <li class='flex items-center'>
+                <a
+                    class={page === 'about' ? 'text-primary' : ''}
+                    href='/about'
+                    >About</a
+                >
+            </li>
+        </ul>
+        <div class='border-l border-gray-200 pl-4 dark:border-neutral-700'>
+            <button
+                aria-label='Toggle between light and dark mode'
+                class='theme-toggle'
+            >
+                <IconSun />
+                <IconMoon />
+            </button>
+        </div>
+    </div>
+</nav>
+
+<script>
+    document.addEventListener('astro:page-load', () => {
+        const button = document.querySelector('.theme-toggle') as HTMLButtonElement;
+        button.ariaPressed = document.documentElement.classList.contains('dark').toString();
+
+        button.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+                localStorage.setItem('theme', 'light');
+                button.ariaPressed = 'false';
+            } else {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+                localStorage.setItem('theme', 'dark');
+                button.ariaPressed = 'true';
+            }
+        });
+    });
+</script>

@@ -6,19 +6,17 @@
         "check": "pnpm --stream --parallel --recursive check",
         "lint": "pnpm --stream --parallel --recursive lint",
         "test": "pnpm --stream --parallel --recursive test",
-        "export": "pnpm --filter @repo/db run build && pnpm --filter @repo/db run start",
-        "site": "pnpm --filter @repo/site run watch",
+        "site": "pnpm --filter @repo/site run dev",
         "gh-pages": "pnpm --filter @repo/site run build",
         "update": "pnpm up --latest --interactive --recursive"
     },
     "author": "decho",
     "license": "MIT",
     "devDependencies": {
-        "@virtuallyunknown/esbuild": "^0.2.2",
-        "@virtuallyunknown/eslint-config": "^0.2.2",
-        "@virtuallyunknown/tsconfig": "^0.2.2",
-        "chokidar": "^3.6.0",
-        "fs-extra": "^11.2.0",
-        "typescript": "^5.5.3"
+        "@virtuallyunknown/esbuild": "^0.4.1",
+        "@virtuallyunknown/eslint-config": "^0.4.1",
+        "@virtuallyunknown/tsconfig": "^0.4.1",
+        "eslint": "^9.30.1",
+        "typescript": "^5.8.3"
     }
 }

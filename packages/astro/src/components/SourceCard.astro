@@ -1,0 +1,30 @@
+---
+import type { DBSource } from '@repo/schemas';
+import { clsx } from 'clsx';
+import SourceTooltip from './SourceTooltip.astro';
+interface Props {
+    data: DBSource;
+    index: number;
+}
+
+const { data, index } = Astro.props;
+---
+
+<button
+    class={clsx(
+        'group relative flex cursor-pointer items-center rounded text-right text-sm',
+        data.type !== 'journalist' &&
+            'bg-button border-button rounded border px-2 py-1 leading-none'
+    )}
+    data-source-id={index}
+>
+    <div class='decoration-2 group-hover:underline group-focus:underline'>
+        {data.name}
+    </div>
+    {
+        data.orgs && data.orgs.length > 0 ? (
+            <span class='text-light ml-1 text-xs font-medium'>({data.orgs[0]})</span>
+        ) : null
+    }
+    <SourceTooltip data={data} />
+</button>

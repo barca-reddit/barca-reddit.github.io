@@ -1,8 +1,9 @@
 import type { Context, TriggerContext } from '@devvit/public-api';
+import type { DevvitSettings, DevvitSource } from '@repo/schemas';
+import { devvitSettings } from '@repo/schemas';
 import linkifyit from 'linkify-it';
 import { fromZodError } from 'zod-validation-error';
-import { settingsSchema } from './schema.js';
-import type { AppSettings, RedditPostV1, Source, TierDetails } from './types.js';
+import type { RedditPostV1, TierDetails } from './types.js';
 
 const linkify = new linkifyit();
 
@@ -35,7 +36,7 @@ export function capitalizeString(string: string) {
  * reliabilityText: text to display in the comment after the source name
  * unreliable: whether the source is unreliable
  */
-const tierData: Record<Source['tier'], TierDetails> = {
+const tierData: Record<DevvitSource['tier'], TierDetails> = {
     official: {
         order: 0,
         commentText: 'Official',
@@ -87,11 +88,11 @@ const tierData: Record<Source['tier'], TierDetails> = {
     },
 };
 
-export function getTierDetails(tier: Source['tier']) {
+export function getTierDetails(tier: DevvitSource['tier']) {
     return tierData[tier];
 }
 
-export function getTierFlairId(tier: Source['tier'], settings: AppSettings) {
+export function getTierFlairId(tier: DevvitSource['tier'], settings: DevvitSettings) {
     switch (tier) {
         case '1': return settings.flairTier1Id;
         case '2': return settings.flairTier2Id;
@@ -102,7 +103,7 @@ export function getTierFlairId(tier: Source['tier'], settings: AppSettings) {
     }
 }
 
-export function sortTiers(a: Source, b: Source) {
+export function sortTiers(a: DevvitSource, b: DevvitSource) {
     return getTierDetails(a.tier).order - getTierDetails(b.tier).order;
 }
 
@@ -110,8 +111,8 @@ export function sortTiers(a: Source, b: Source) {
  * Devvit onValidate is a bit weird, if you return string it assumes an error,
  * if you return undefined it assumes success, so here we return accordingly.
  */
-export function validateSetting(key: keyof AppSettings, value: unknown) {
-    const parsed = settingsSchema.shape[key].safeParse(value);
+export function validateSetting(key: keyof DevvitSettings, value: unknown) {
+    const parsed = devvitSettings.shape[key].safeParse(value);
 
     return parsed.success
         ? undefined
@@ -119,10 +120,10 @@ export function validateSetting(key: keyof AppSettings, value: unknown) {
 }
 
 export async function getAllSettings(context: Context | TriggerContext) {
-    return settingsSchema.parse(await context.settings.getAll<AppSettings>());
+    return devvitSettings.parse(await context.settings.getAll<DevvitSettings>());
 }
 
-export function isIgnoredUser(username: string, settings: AppSettings) {
+export function isIgnoredUser(username: string, settings: DevvitSettings) {
     return settings.ignoredUsers
         .some(ignoredUser => ignoredUser.toLowerCase() === username.toLowerCase());
 }

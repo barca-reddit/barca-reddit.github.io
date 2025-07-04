@@ -1,8 +1,9 @@
-import { sortTiers } from './index.js';
-import type { AppSettings, PostData, Source } from './types.js';
+import type { DevvitSettings, DevvitSource } from '@repo/schemas';
+import { sortTiers } from './helpers.js';
+import type { PostData } from './types.js';
 
-export function findSourcesInPost(post: PostData, settings: AppSettings) {
-    const list = new Map<string, Source>();
+export function findSourcesInPost(post: PostData, settings: DevvitSettings) {
+    const list = new Map<string, DevvitSource>();
 
     findMatchesInTitle(post.titleNormalized, settings.sources, list);
 
@@ -25,7 +26,7 @@ export function findSourcesInPost(post: PostData, settings: AppSettings) {
     return result.length > 0 ? result : null;
 }
 
-function findMatchesInTitle(titleNormalized: string, sources: Source[], list: Map<string, Source>) {
+function findMatchesInTitle(titleNormalized: string, sources: DevvitSource[], list: Map<string, DevvitSource>) {
     for (const source of sources) {
         if (isNameInTitle({ titleNormalized, source })) {
             list.set(source.id, source);
@@ -39,7 +40,7 @@ function findMatchesInTitle(titleNormalized: string, sources: Source[], list: Ma
     }
 }
 
-function findMatchesInUrl(url: URL, sources: Source[], list: Map<string, Source>) {
+function findMatchesInUrl(url: URL, sources: DevvitSource[], list: Map<string, DevvitSource>) {
     for (const source of sources) {
         if (isHandleInUrl({ url, source })) {
             list.set(source.id, source);
@@ -50,7 +51,7 @@ function findMatchesInUrl(url: URL, sources: Source[], list: Map<string, Source>
     }
 }
 
-function findMatchesInLinks(urls: URL[], sources: Source[], list: Map<string, Source>) {
+function findMatchesInLinks(urls: URL[], sources: DevvitSource[], list: Map<string, DevvitSource>) {
     for (const source of sources) {
         if (isHandleInLinks({ urls, source })) {
             list.set(source.id, source);
@@ -61,7 +62,7 @@ function findMatchesInLinks(urls: URL[], sources: Source[], list: Map<string, So
     }
 }
 
-function findMatchesInBody(bodyNormalized: string, settings: AppSettings, list: Map<string, Source>) {
+function findMatchesInBody(bodyNormalized: string, settings: DevvitSettings, list: Map<string, DevvitSource>) {
     for (const source of settings.sources) {
         if (settings.analyzeNamesInBody && isNameInBody({ bodyNormalized, source })) {
             list.set(source.id, source);
@@ -94,7 +95,7 @@ function findMatchesInBody(bodyNormalized: string, settings: AppSettings, list: 
  * 
  * @devnote Double escape template literal RegExp
  */
-function isNameInTitle({ titleNormalized, source }: { titleNormalized: string, source: Source }) {
+function isNameInTitle({ titleNormalized, source }: { titleNormalized: string, source: DevvitSource }) {
     if (source.nameIsCommon) {
         return new RegExp(`^${source.nameNormalized}:|(\\(|\\[)${source.nameNormalized}(\\)|\\])`, 'i').test(titleNormalized);
     }
@@ -121,15 +122,15 @@ function isNameInTitle({ titleNormalized, source }: { titleNormalized: string, s
  * 
  * @devnote Double escape template literal RegExp
  */
-function isAliasInTitle({ titleNormalized, source }: { titleNormalized: string, source: Source }) {
+function isAliasInTitle({ titleNormalized, source }: { titleNormalized: string, source: DevvitSource }) {
     if (!source.aliasesNormalized) {
         return false;
     }
 
     return source.aliasesNormalized
-        .some(alias => alias.aliasIsCommon
-            ? new RegExp(`^${alias.aliasNormalized}:|(\\(|\\[)${alias.aliasNormalized}(\\)|\\])`, 'i').test(titleNormalized)
-            : new RegExp(`\\b${alias.aliasNormalized}\\b`, 'i').test(titleNormalized));
+        .some(({ aliasIsCommon, aliasNormalized }) => aliasIsCommon
+            ? new RegExp(`^${aliasNormalized}:|(\\(|\\[)${aliasNormalized}(\\)|\\])`, 'i').test(titleNormalized)
+            : new RegExp(`\\b${aliasNormalized}\\b`, 'i').test(titleNormalized));
 }
 
 /**
@@ -149,13 +150,13 @@ function isAliasInTitle({ titleNormalized, source }: { titleNormalized: string, 
  * @see https://github.com/jsdoc/jsdoc/issues/1521
  * @see https://unicode-explorer.com/c/200C
  */
-function isHandleInTitle({ titleNormalized, source }: { titleNormalized: string, source: Source }) {
+function isHandleInTitle({ titleNormalized, source }: { titleNormalized: string, source: DevvitSource }) {
     if (!source.handlesNormalized) {
         return false;
     }
 
     return source.handlesNormalized
-        .some(handle => new RegExp(`^@?${handle}:|@${handle}\\b|(\\(|\\[)${handle}(\\)|\\])`, 'i').test(titleNormalized));
+        .some(({ handleNormalized }) => new RegExp(`^@?${handleNormalized}:|@${handleNormalized}\\b|(\\(|\\[)${handleNormalized}(\\)|\\])`, 'i').test(titleNormalized));
 }
 
 /**
@@ -172,22 +173,29 @@ function isHandleInTitle({ titleNormalized, source }: { titleNormalized: string,
  * x.com/handle
  * x.com/handle/
  * x.com/handle/status/12345
+ * bsky.app/profile/handle
+ * bsky.app/profile/handle/
+ * bsky.app/profile/handle/status/12345
  * ```
  * 
  * @devnote URL pathname always starts with forward slash
  * @devnote Double escape template literal RegExp
  */
-function isHandleInUrl({ url, source }: { url: URL, source: Source }) {
+function isHandleInUrl({ url, source }: { url: URL, source: DevvitSource }) {
     if (!source.handlesNormalized) {
         return false;
     }
 
-    if (!['x.com', 'xcancel.com', 'twitter.com'].includes(url.hostname)) {
+    if (!['x.com', 'xcancel.com', 'twitter.com', 'bsky.app'].includes(url.hostname)) {
         return false;
     }
 
     return source.handlesNormalized
-        .some(handle => new RegExp(`^\\/${handle}(\\/|\\s|$)`, 'i').test(url.pathname));
+        .some(({ handleNormalized, platform }) => {
+            return platform === 'x'
+                ? new RegExp(`^\\/${handleNormalized}(\\/|\\s|$)`, 'i').test(url.pathname)
+                : new RegExp(`^\\/profile\\/${handleNormalized}(\\/|\\s|$)`, 'i').test(url.pathname);
+        });
 }
 
 /**
@@ -206,7 +214,7 @@ function isHandleInUrl({ url, source }: { url: URL, source: Source }) {
  * @devnote Escape periods in domain names
  * @devnote Double escape template literal RegExp
  */
-function isDomainInUrl({ url, source }: { url: URL, source: Source }) {
+function isDomainInUrl({ url, source }: { url: URL, source: DevvitSource }) {
     if (!source.domains) {
         return false;
     }
@@ -229,20 +237,25 @@ function isDomainInUrl({ url, source }: { url: URL, source: Source }) {
  * x.com/handle
  * x.com/handle/
  * x.com/handle/status/12345
+ * bsky.app/profile/handle
+ * bsky.app/profile/handle/
+ * bsky.app/profile/handle/status/12345
  * ```
  * 
  * @devnote Double escape template literal RegExp
  */
-function isHandleInLinks({ urls, source }: { urls: URL[], source: Source }) {
+function isHandleInLinks({ urls, source }: { urls: URL[], source: DevvitSource }) {
     if (!source.handlesNormalized) {
         return false;
     }
 
-    return urls
-        .some(url =>
-            ['x.com', 'xcancel.com', 'twitter.com'].includes(url.hostname) &&
-            source.handlesNormalized
-                ?.some(handle => new RegExp(`^\/${handle}(\\/|\\s|$)`, 'i').test(url.pathname)));
+    return source.handlesNormalized
+        .some(({ handleNormalized, platform }) =>
+            urls.some(url =>
+                ['x.com', 'xcancel.com', 'twitter.com', 'bsky.app'].includes(url.hostname) &&
+                    platform === 'x'
+                    ? new RegExp(`^\\/${handleNormalized}(\\/|\\s|$)`, 'i').test(url.pathname)
+                    : new RegExp(`^\\/profile\\/${handleNormalized}(\\/|\\s|$)`, 'i').test(url.pathname)));
 }
 
 /**
@@ -261,7 +274,7 @@ function isHandleInLinks({ urls, source }: { urls: URL[], source: Source }) {
  * @devnote Escape periods in domain names
  * @devnote Double escape template literal RegExp
  */
-function isDomainInLinks({ urls, source }: { urls: URL[], source: Source }) {
+function isDomainInLinks({ urls, source }: { urls: URL[], source: DevvitSource }) {
     if (!source.domains) {
         return false;
     }
@@ -290,7 +303,7 @@ function isDomainInLinks({ urls, source }: { urls: URL[], source: Source }) {
  * 
  * @devnote Double escape template literal RegExp
  */
-function isNameInBody({ bodyNormalized, source }: { bodyNormalized: string, source: Source }) {
+function isNameInBody({ bodyNormalized, source }: { bodyNormalized: string, source: DevvitSource }) {
     if (source.nameIsCommon) {
         return new RegExp(`^${source.nameNormalized}:|(\\[|\\()${source.nameNormalized}(\\]|\\))`, 'im').test(bodyNormalized);
     }
@@ -317,15 +330,15 @@ function isNameInBody({ bodyNormalized, source }: { bodyNormalized: string, sour
  * 
  * @devnote Double escape template literal RegExp
  */
-function isAliasInBody({ bodyNormalized, source }: { bodyNormalized: string, source: Source }) {
+function isAliasInBody({ bodyNormalized, source }: { bodyNormalized: string, source: DevvitSource }) {
     if (!source.aliasesNormalized) {
         return false;
     }
 
     return source.aliasesNormalized
-        .some(alias => alias.aliasIsCommon
-            ? new RegExp(`^${alias.aliasNormalized}:|(\\[|\\()${alias.aliasNormalized}(\\]|\\))`, 'im').test(bodyNormalized)
-            : new RegExp(`\\b${alias.aliasNormalized}\\b`, 'i').test(bodyNormalized));
+        .some(({ aliasIsCommon, aliasNormalized }) => aliasIsCommon
+            ? new RegExp(`^${aliasNormalized}:|(\\[|\\()${aliasNormalized}(\\]|\\))`, 'im').test(bodyNormalized)
+            : new RegExp(`\\b${aliasNormalized}\\b`, 'i').test(bodyNormalized));
 }
 
 /**
@@ -346,13 +359,13 @@ function isAliasInBody({ bodyNormalized, source }: { bodyNormalized: string, sou
  * @see https://github.com/jsdoc/jsdoc/issues/1521
  * @see https://unicode-explorer.com/c/200C
  */
-function isHandleInBody({ bodyNormalized, source }: { bodyNormalized: string, source: Source }) {
+function isHandleInBody({ bodyNormalized, source }: { bodyNormalized: string, source: DevvitSource }) {
     if (!source.handlesNormalized) {
         return false;
     }
 
     return source.handlesNormalized
-        .some(handle => new RegExp(`^@?${handle}:|@${handle}\\b|(\\(|\\[)${handle}(\\)|\\])`, 'im').test(bodyNormalized));
+        .some(({ handleNormalized }) => new RegExp(`^@?${handleNormalized}:|@${handleNormalized}\\b|(\\(|\\[)${handleNormalized}(\\)|\\])`, 'im').test(bodyNormalized));
 }
 
 export const __test__ = {

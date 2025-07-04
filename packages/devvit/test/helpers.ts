@@ -1,17 +1,19 @@
+import type { DevvitSource } from '@repo/schemas';
+import { devvitSourceSchema } from '@repo/schemas';
+import { randomUUID } from 'node:crypto';
 import { expect } from 'vitest';
-import { sourceSchema } from '../src/index.js';
-import type { Source } from '../src/types.js';
 
 /**
  * Disallow passing normalized values directly to the function.
  */
 type CreateSourceParams = {
-    [key in keyof Omit<Source, 'nameNormalized' | 'handlesNormalized' | 'aliasesNormalized'>]+?: Source[key]
+    [key in keyof Omit<DevvitSource, 'nameNormalized' | 'handlesNormalized' | 'aliasesNormalized'>]+?: DevvitSource[key]
 };
 
 export function createSource(params: CreateSourceParams) {
-    const source: Omit<Source, 'nameNormalized' | 'handlesNormalized' | 'aliasesNormalized'> = {
-        id: params.id ?? Math.random().toString(),
+    const source: Omit<DevvitSource, 'nameNormalized' | 'handlesNormalized' | 'aliasesNormalized'> = {
+        id: params.id ?? randomUUID(),
+        type: params.type ?? 'journalist',
         name: params.name ?? 'name',
         nameIsCommon: params.nameIsCommon ?? false,
         tier: params.tier ?? '1',
@@ -20,7 +22,7 @@ export function createSource(params: CreateSourceParams) {
         aliases: params.aliases ?? null,
     };
 
-    return sourceSchema.parse(source);
+    return devvitSourceSchema.parse(source);
 }
 
 type Entry<T> = ReadonlyArray<readonly [boolean, T]>;

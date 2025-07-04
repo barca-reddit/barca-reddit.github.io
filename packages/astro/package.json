@@ -1,0 +1,30 @@
+{
+    "name": "@repo/astro",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev --host",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro",
+        "check": "astro check",
+        "lint": "eslint 'src/**/*.{ts,astro}' --max-warnings 0 --report-unused-disable-directives"
+    },
+    "dependencies": {
+        "@astrojs/check": "^0.9.4",
+        "@astrojs/tailwind": "^6.0.2",
+        "@repo/schemas": "workspace:*",
+        "astro": "^5.10.2",
+        "astro-icon": "^1.1.5",
+        "clsx": "^2.1.1",
+        "dayjs": "^1.11.13"
+    },
+    "devDependencies": {
+        "astro-eslint-parser": "^1.2.2",
+        "eslint-config-prettier": "^10.1.5",
+        "eslint-plugin-astro": "^1.3.1",
+        "eslint-plugin-better-tailwindcss": "^3.4.3",
+        "eslint-plugin-jsx-a11y": "^6.10.2",
+        "tailwindcss": "<4.0.0"
+    }
+}

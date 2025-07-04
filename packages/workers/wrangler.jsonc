@@ -1,0 +1,41 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+    "$schema": "../../node_modules/wrangler/config-schema.json",
+    "name": "media-reliability",
+    "main": "src/index.ts",
+    "compatibility_date": "2025-06-10",
+    "observability": {
+        "enabled": true
+    },
+    "dev": {
+        "local_protocol": "https"
+    },
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_id": "8465eace-b4d2-4637-bbd0-9bbfb1115ea9",
+            "database_name": "media-reliability"
+        }
+    ],
+    "triggers": {
+        "crons": [
+            // "* * * * *"
+        ]
+    },
+    "unsafe": {
+        "bindings": [
+            {
+                "name": "LOGIN_RATE_LIMIT",
+                "type": "ratelimit",
+                "namespace_id": "1001",
+                "simple": {
+                    "limit": 2,
+                    "period": 60
+                }
+            }
+        ]
+    }
+}

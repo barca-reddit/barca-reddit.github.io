@@ -1,0 +1,137 @@
+---
+import type { DBSource } from '@repo/schemas';
+import { Icon } from 'astro-icon/components';
+import { dayjs } from '../util/dayjs.ts';
+
+interface Props {
+    data: DBSource;
+}
+
+const { data } = Astro.props;
+---
+
+<div
+    class={`
+        bg-primary border-primary absolute -left-72 z-10 hidden w-72 animate-fade-in flex-col
+        rounded-lg border shadow shadow-gray-200 motion-reduce:animate-none dark:shadow-neutral-800
+    `}
+    data-tooltip
+>
+    <div class='border-primary flex items-center gap-2 border-b p-4 pb-2'>
+        <Icon
+            class='size-5'
+            name='ph-info-bold'
+        />
+        <h3 class='text-left text-xl font-medium tracking-tighter'>
+            {data.name}
+        </h3>
+        <span
+            class='sr-only'
+            id={`${data.id}-details`}
+            >{`${data.name} details`}</span
+        >
+    </div>
+    <div class='grid grid-cols-[min-content,1fr] items-start gap-x-2 gap-y-3 p-4 leading-none'>
+        <span class='text-nowrap text-left'>Type:</span>
+        <span class='text-right'>{data.type}</span>
+
+        {
+            data.type !== 'aggregator' ? (
+                <>
+                    <span class='text-nowrap text-left'>Tier:</span>
+                    <span class='text-right'>Tier {data.tier}</span>
+                </>
+            ) : null
+        }
+        {
+            data.orgs && data.orgs.length > 0 ? (
+                <>
+                    <span class='text-nowrap text-left'>Organizations:</span>
+                    <div class='flex flex-col gap-2'>
+                        {data.orgs.map(org => (
+                            <span class='text-right'>{org}</span>
+                        ))}
+                    </div>
+                </>
+            ) : null
+        }
+        {
+            data.handles && data.handles.length > 0 ? (
+                <>
+                    <span class='text-nowrap text-left'>Handle(s):</span>
+                    <div class='flex flex-col gap-2'>
+                        {data.handles.map(handle => {
+                            if (handle.platform === 'x') {
+                                return (
+                                    <a
+                                        class={`
+                                            flex items-center justify-end gap-1 text-right
+                                            text-sky-500 hover:underline
+                                        `}
+                                        href={`https://x.com/${handle.handle}`}
+                                        target='_blank'
+                                    >
+                                        {handle.handle}
+                                        <Icon
+                                            class='size-3'
+                                            name='fa6-brands-x-twitter'
+                                        />
+                                    </a>
+                                );
+                            }
+                            // eslint-disable-next-line @typescript-eslint/no-unnecessary-condition
+                            if (handle.platform === 'bsky') {
+                                return (
+                                    <a
+                                        class={`
+                                            flex items-center justify-end gap-1 text-right
+                                            text-sky-500 hover:underline
+                                        `}
+                                        href={`https://bsky.app/profile/${handle.handle}`}
+                                        target='_blank'
+                                    >
+                                        {handle.handle.replace(/\.bsky\.social/, '')}
+                                        <Icon
+                                            class='size-3'
+                                            name='fa6-brands-bluesky'
+                                        />
+                                    </a>
+                                );
+                            }
+                        })}
+                    </div>
+                </>
+            ) : null
+        }
+        {
+            data.domains && data.domains.length > 0 ? (
+                <>
+                    <span class='text-nowrap text-left'>Domain(s):</span>
+                    <div class='flex flex-col gap-2'>
+                        {data.domains.map(domain => (
+                            <a
+                                class='text-right text-sky-500 hover:underline'
+                                href={`https://${domain}`}
+                                target='_blank'
+                            >
+                                {domain}
+                            </a>
+                        ))}
+                    </div>
+                </>
+            ) : null
+        }
+        <>
+            <span class='text-nowrap text-left'>Added On:</span>
+            <span class='text-right'>{dayjs(data.addedOn).format('Do MMM YYYY')}</span>
+        </>
+        {
+            data.updatedOn ? (
+                <>
+                    <span class='text-nowrap text-left'>Updated At:</span>
+                    <span class='text-right'>{dayjs(data.updatedOn).format('Do MMM YYYY')}</span>
+                </>
+            ) : null
+        }
+    </div>
+</div>
