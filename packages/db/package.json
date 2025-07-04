@@ -6,9 +6,11 @@
     "scripts": {
         "deploy": "wrangler deploy",
         "dev": "wrangler dev",
+        "lint": "eslint 'src/**/*.ts' --max-warnings 0 --report-unused-disable-directives",
+        "check": "tsc",
         "cf-typegen": "wrangler types",
         "db-local": "./d1.sh --local",
-        "db-migrate": "./d1.sh --remote"
+        "db-remote": "./d1.sh --remote"
     },
     "devDependencies": {
         "wrangler": "^4.22.0"
