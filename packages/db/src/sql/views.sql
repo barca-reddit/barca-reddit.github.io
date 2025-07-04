@@ -54,6 +54,47 @@ ORDER BY
     END ASC,
     sources.name ASC;
 
+CREATE VIEW IF NOT EXISTS devvit_sources_list AS
+SELECT
+    id,
+    name,
+    name_is_common,
+    type,
+    tier,
+    handles,
+    aliases,
+    domains
+FROM
+    sources
+WHERE
+    sources.removed = 0
+ORDER BY
+    CASE WHEN sources.tier = 'official' THEN
+        1
+    WHEN sources.tier = '1' THEN
+        2
+    WHEN sources.tier = '2' THEN
+        3
+    WHEN sources.tier = '3' THEN
+        4
+    WHEN sources.tier = '4' THEN
+        5
+    WHEN sources.tier = '5' THEN
+        6
+    WHEN sources.tier = 'aggregator' THEN
+        7
+    END ASC,
+    CASE WHEN sources.type = 'official' THEN
+        1
+    WHEN sources.type = 'journalist' THEN
+        2
+    WHEN sources.type = 'media' THEN
+        3
+    WHEN sources.type = 'aggregator' THEN
+        4
+    END ASC,
+    sources.name ASC;
+
 CREATE VIEW IF NOT EXISTS updates_list AS
 SELECT
     updates.*,
