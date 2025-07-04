@@ -3,7 +3,16 @@ import { submitComment } from './comment.js';
 import { getAllSettings, isIgnoredUser, processPost, trySendPostErrorModmail, validateSetting } from './helpers.js';
 import { findSourcesInPost } from './matcher.js';
 
-Devvit.configure({ redditAPI: true });
+Devvit.configure({
+    redditAPI: true,
+    http: {
+        enabled: true,
+        domains: [
+            'workers.dev',
+            'media-reliability.barcareddit.workers.dev'
+        ]
+    }
+});
 
 Devvit.addSettings([
     {
