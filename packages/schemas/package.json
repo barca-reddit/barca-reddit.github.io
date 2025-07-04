@@ -4,7 +4,7 @@
     "type": "module",
     "scripts": {
         "check": "tsc",
-        "lint": "eslint --max-warnings 0 src"
+        "lint": "eslint 'src/**/*.ts' --max-warnings 0 --report-unused-disable-directives"
     },
     "exports": {
         ".": {
