@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "astro dev --host",
         "build": "astro build",
-        "preview": "astro preview",
+        "preview": "astro preview --host",
         "astro": "astro",
         "check": "astro check",
         "lint": "eslint 'src/**/*.{ts,astro}' --max-warnings 0 --report-unused-disable-directives"
