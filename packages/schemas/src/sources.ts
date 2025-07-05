@@ -43,6 +43,12 @@ const baseSchema = z.object({
 });
 
 const dbSourceSchema = baseSchema.strict();
+const devvitBaseSchema = baseSchema.omit({
+    addedOn: true,
+    updatedOn: true,
+    removed: true,
+    orgs: true,
+}).strict();
 
 export const devvitSourceSchema = baseSchema.omit({
     addedOn: true,
@@ -71,3 +77,6 @@ export const dbSourceListSchema = z.array(dbSourceSchema);
 
 export type DevvitSource = z.infer<typeof devvitSourceSchema>;
 export const devvitSourceListSchema = z.array(devvitSourceSchema);
+
+export type DevvitBase = z.infer<typeof devvitBaseSchema>;
+export const devvitBaseListSchema = z.array(devvitBaseSchema);
