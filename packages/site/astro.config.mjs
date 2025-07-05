@@ -10,8 +10,4 @@ export default defineConfig({
         iconDir: 'src/assets/icons',
     })],
     site: 'https://barca-reddit.github.io',
-    // prefetch: {
-    //     defaultStrategy: 'hover',
-    //     prefetchAll: true,
-    // }
 });
