@@ -18,5 +18,14 @@
         "@virtuallyunknown/tsconfig": "^0.4.1",
         "eslint": "^9.30.1",
         "typescript": "^5.8.3"
+    },
+    "pnpm": {
+        "updateConfig": {
+            "ignoreDependencies": [
+                "tailwindcss",
+                "zod",
+                "zod-validation-error"
+            ]
+        }
     }
 }
