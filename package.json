@@ -13,7 +13,6 @@
     "author": "decho",
     "license": "MIT",
     "devDependencies": {
-        "@virtuallyunknown/esbuild": "^0.4.1",
         "@virtuallyunknown/eslint-config": "^0.4.1",
         "@virtuallyunknown/tsconfig": "^0.4.1",
         "eslint": "^9.30.1",
