@@ -155,18 +155,23 @@ function getPostLinks(body: string) {
     return links.length > 0 ? links : null;
 }
 
-export function processPost(post: RedditPostV1) {
+export function getSourceData(post: RedditPostV1) {
     const url = new URL(post.url, 'https://www.reddit.com');
     const links = post.body ? getPostLinks(post.body) : null;
 
     return ({
-        id: post.id,
-        subredditName: post.subredditName,
         titleNormalized: normalizeText(post.title),
         bodyNormalized: post.body && post.body.length > 0 ? normalizeText(post.body) : null,
         url: !['v.redd.it', 'i.redd.it', 'reddit.com', 'www.reddit.com'].includes(url.hostname) ? url : null,
         links: links,
     });
+}
+
+export function getPostData(post: RedditPostV1) {
+    return {
+        id: post.id,
+        subredditName: post.subredditName,
+    };
 }
 
 export async function trySendPostErrorModmail(context: TriggerContext, postId: string, error: Error) {

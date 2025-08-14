@@ -1,7 +1,7 @@
 import type { TriggerContext } from '@devvit/public-api';
 import type { DevvitSettings, DevvitSource } from '@repo/schemas';
 import { getTierDetails, getTierFlairId } from './helpers.js';
-import type { PostData } from './types.js';
+import type { PostData, SourceData } from './types.js';
 
 function getSourceLine(source: DevvitSource) {
     const { name, handles, tier, domains } = source;
@@ -26,6 +26,7 @@ function getSourceLine(source: DevvitSource) {
 
 type HandleFlairProps = {
     postData: PostData;
+    sourceData: SourceData;
     settings: DevvitSettings;
     sources: DevvitSource[];
     context: TriggerContext;
@@ -37,8 +38,8 @@ type HandleFlairProps = {
  * - The first source is official or an aggregator.
  * - The post is a self-post.
  */
-async function handleFlair({ postData, sources, settings, context }: HandleFlairProps) {
-    if (postData.url?.hostname && ['reddit.com', 'www.reddit.com'].includes(postData.url.hostname)) {
+async function handleFlair({ postData, sourceData, sources, settings, context }: HandleFlairProps) {
+    if (sourceData.url?.hostname && ['reddit.com', 'www.reddit.com'].includes(sourceData.url.hostname)) {
         return false;
     }
 
@@ -65,13 +66,14 @@ async function handleFlair({ postData, sources, settings, context }: HandleFlair
 
 type SubmitCommentProps = {
     postData: PostData;
+    sourceData: SourceData;
     sources: DevvitSource[];
     settings: DevvitSettings;
     context: TriggerContext;
 };
 
-export async function submitComment({ postData, sources, settings, context }: SubmitCommentProps) {
-    await handleFlair({ postData, sources, settings, context });
+export async function submitComment({ postData, sourceData, sources, settings, context }: SubmitCommentProps) {
+    await handleFlair({ postData, sourceData, sources, settings, context });
 
     const header = `**Media reliability report:**`;
     const warningForUnreliable = sources.some(source => getTierDetails(source.tier).unreliable)

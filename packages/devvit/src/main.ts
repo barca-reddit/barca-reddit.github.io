@@ -1,17 +1,16 @@
 import { Devvit } from '@devvit/public-api';
 import { submitComment } from './comment.js';
-import { getAllSettings, isIgnoredUser, processPost, trySendPostErrorModmail, validateSetting } from './helpers.js';
+import { getAllSettings, getPostData, getSourceData, isIgnoredUser, trySendPostErrorModmail, validateSetting } from './helpers.js';
 import { findSourcesInPost } from './matcher.js';
 
 Devvit.configure({
     redditAPI: true,
-    http: {
-        enabled: true,
-        domains: [
-            'workers.dev',
-            'media-reliability.barcareddit.workers.dev'
-        ]
-    }
+    // http: {
+    //     enabled: true,
+    //     domains: [
+    //         'media-reliability.barcareddit.workers.dev'
+    //     ]
+    // }
 });
 
 Devvit.addSettings([
@@ -199,24 +198,51 @@ Devvit.addTrigger({
                 throw new Error('PostSubmit event missing post id, subreddit name or author name.');
             }
 
-            const post = event.post.crosspostParentId
-                ? await context.reddit.getPostById(event.post.crosspostParentId)
-                : await context.reddit.getPostById(event.post.id);
+            /**
+             * When dealing with crossposts, we need to do the following:
+             * 
+             * 1) For source extracting and processing, use the crosspost
+             * from the foreign subreddit itself, because it's likely that
+             * it will contain more sources and information than the
+             * original post where the app is installed.
+             * 
+             * 2) When we pass postData to the function that deals with
+             * submitting the comment, we need to pass the postId and
+             * subredditName of the original post, not the crosspost.
+             * This is because the comment will be submitted in the
+             * original post subreddit, not the crosspost subreddit.
+             * We also don't have permission to submit comments outside
+             * of the original post subreddit.
+             * 
+             * event.post.crosspostParentId is an empty string (falsy value)
+             * if the post is not a crosspost.
+             * @see https://developer.mozilla.org/en-US/docs/Glossary/Falsy
+             */
 
-            const postData = processPost(post);
+            const isCrossPost = !!event.post.crosspostParentId;
+
+            const [subredditPost, crossPost] = await Promise.all([
+                context.reddit.getPostById(event.post.id),
+                isCrossPost
+                    ? context.reddit.getPostById(event.post.crosspostParentId)
+                    : Promise.resolve(null)
+            ]);
+
+            const sourceData = getSourceData(crossPost ?? subredditPost);
+            const postData = getPostData(subredditPost);
             const settings = await getAllSettings(context);
 
             if (isIgnoredUser(event.author.name, settings)) {
                 return;
             }
 
-            const sources = findSourcesInPost(postData, settings);
+            const sources = findSourcesInPost(sourceData, settings);
 
             if (!sources) {
                 return;
             }
 
-            await submitComment({ postData, sources, settings, context });
+            await submitComment({ postData, sourceData, sources, settings, context });
 
         }
         catch (error) {
@@ -234,10 +260,10 @@ Devvit.addMenuItem({
     location: 'post',
     async onPress(event, context) {
         const post = await context.reddit.getPostById(event.targetId);
-        const postData = processPost(post);
+        const sourceData = getSourceData(post);
 
         const settings = await getAllSettings(context);
-        const sources = findSourcesInPost(postData, settings);
+        const sources = findSourcesInPost(sourceData, settings);
 
         context.ui.showToast('Check app logs for debugging information.');
         console.log(JSON.stringify(sources, null, 2));

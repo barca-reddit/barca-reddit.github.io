@@ -1,11 +1,12 @@
 import type { PostCreate } from '@devvit/protos';
 import type { Post } from '@devvit/public-api';
-import type { processPost } from './helpers.js';
+import type { getSourceData } from './helpers.js';
 
 export type RedditPostV1 = Post;
 export type RedditPostV2 = Exclude<PostCreate['post'], undefined>;
 
-export type PostData = ReturnType<typeof processPost>;
+export type SourceData = ReturnType<typeof getSourceData>;
+export type PostData = Pick<Post, 'id' | 'subredditName'>;
 
 export type ValidationResult =
     { success: true } |

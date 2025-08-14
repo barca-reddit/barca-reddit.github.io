@@ -1,22 +1,22 @@
 import type { DevvitSettings, DevvitSource } from '@repo/schemas';
 import { sortTiers } from './helpers.js';
-import type { PostData } from './types.js';
+import type { SourceData } from './types.js';
 
-export function findSourcesInPost(post: PostData, settings: DevvitSettings) {
+export function findSourcesInPost(data: SourceData, settings: DevvitSettings) {
     const list = new Map<string, DevvitSource>();
 
-    findMatchesInTitle(post.titleNormalized, settings.sources, list);
+    findMatchesInTitle(data.titleNormalized, settings.sources, list);
 
-    if (post.url) {
-        findMatchesInUrl(post.url, settings.sources, list);
+    if (data.url) {
+        findMatchesInUrl(data.url, settings.sources, list);
     }
 
-    if (post.links && settings.analyzeLinksInBody) {
-        findMatchesInLinks(post.links, settings.sources, list);
+    if (data.links && settings.analyzeLinksInBody) {
+        findMatchesInLinks(data.links, settings.sources, list);
     }
 
-    if (post.bodyNormalized && (settings.analyzeNamesInBody || settings.analyzeHandlesInBody)) {
-        findMatchesInBody(post.bodyNormalized, settings, list);
+    if (data.bodyNormalized && (settings.analyzeNamesInBody || settings.analyzeHandlesInBody)) {
+        findMatchesInBody(data.bodyNormalized, settings, list);
     }
 
     const result = Array
