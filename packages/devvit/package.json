@@ -7,15 +7,15 @@
         "test": "vitest --reporter=verbose --run"
     },
     "dependencies": {
-        "@devvit/public-api": "^0.11.18",
+        "@devvit/public-api": "^0.12.0",
         "linkify-it": "^5.0.0",
         "zod-validation-error": "^3.4.0"
     },
     "devDependencies": {
-        "@devvit/protos": "^0.11.18",
+        "@devvit/protos": "^0.12.0",
         "@repo/schemas": "workspace:*",
         "@types/linkify-it": "^5.0.0",
-        "devvit": "^0.11.18",
+        "devvit": "^0.12.0",
         "vitest": "^3.2.4"
     }
 }
