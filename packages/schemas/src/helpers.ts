@@ -17,7 +17,7 @@ export function normalizeText(text: string) {
         .toLowerCase();
 }
 
-export function preprocessStringToCommaSeparatedArray(value: unknown, ctx: RefinementCtx) {
+export function preprocessStringToCommaSeparatedArrayOfUUIDs(value: unknown, ctx: RefinementCtx) {
     if (typeof value !== 'string') {
         ctx.addIssue({
             code: 'invalid_type',
@@ -28,11 +28,57 @@ export function preprocessStringToCommaSeparatedArray(value: unknown, ctx: Refin
         return z.NEVER;
     }
 
+    if (value.trim() === '') {
+        return undefined;
+    }
+
+    try {
+        const uuids = value.split(',').map(item => item.trim());
+
+        if (uuids.some(uuid => uuid.length === 0) || uuids.some(uuid => !/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(uuid))) {
+            ctx.addIssue({
+                code: z.ZodIssueCode.custom,
+                message: 'Invalid input. Expected comma-separated string of UUIDs.',
+                fatal: true,
+            });
+
+            return z.NEVER;
+        }
+
+        return uuids;
+    }
+
+    catch (error) {
+        ctx.addIssue({
+            code: z.ZodIssueCode.custom,
+            message: 'Invalid input. Expected comma-separated string with values.',
+            fatal: true,
+        });
+
+        return z.NEVER;
+    }
+}
+
+export function preprocessStringToCommaSeparatedArrayOfUsernames(value: unknown, ctx: RefinementCtx) {
+    if (typeof value !== 'string') {
+        ctx.addIssue({
+            code: 'invalid_type',
+            expected: 'string',
+            received: typeof value,
+        });
+
+        return z.NEVER;
+    }
+
+    if (value.trim() === '') {
+        return undefined;
+    }
+
     try {
         const usernames = value.split(',').map(item => item.trim());
 
         // reddit usernames can only contain alphanumeric characters, underscores and hyphens
-        if (usernames.some(username => /[^a-zA-Z0-9_-]/.test(username))) {
+        if (usernames.some(username => username.length === 0) || usernames.some(username => /[^a-zA-Z0-9_-]/.test(username))) {
             ctx.addIssue({
                 code: z.ZodIssueCode.custom,
                 message: 'Invalid input. Reddit usernames can only contain alphanumeric characters, underscores and hyphens.',
@@ -56,8 +102,15 @@ export function preprocessStringToCommaSeparatedArray(value: unknown, ctx: Refin
     }
 }
 
+export function preprocessEmptyStringToUndefined(value: unknown) {
+    if (typeof value === 'string' && value.trim() === '') {
+        return undefined;
+    }
+
+    return value;
+}
+
 export function preprocessStringToBoolean(value: unknown, ctx: RefinementCtx) {
-    console.log(value);
     if (typeof value === 'boolean') {
         return value;
     }
