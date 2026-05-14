@@ -1,6 +1,6 @@
 import { Devvit } from '@devvit/public-api';
 import { submitComment } from './comment.js';
-import { getAllSettings, getPostData, getSourceData, isIgnoredUser, trySendPostErrorModmail, validateSetting } from './helpers.js';
+import { getAllSettings, getPostData, getSourceData, isIgnoredFlair, isIgnoredUser, trySendPostErrorModmail, validateSetting } from './helpers.js';
 import { findSourcesInPost } from './matcher.js';
 
 Devvit.configure({
@@ -138,6 +138,17 @@ Devvit.addSettings([
         }
     },
     {
+        type: 'paragraph',
+        name: 'ignoredFlairs',
+        label: 'Comma separated list of flair uuids to ignore.',
+        helpText: 'Posts with these flairs uuids will not trigger any bot actions. Only works if the flair already exists upon post creation.',
+        defaultValue: '',
+        scope: 'installation',
+        onValidate: ({ value }) => {
+            return validateSetting('ignoredFlairs', value);
+        }
+    },
+    {
         type: 'boolean',
         name: 'analyzeNamesInBody',
         label: 'Analyze post body for source names',
@@ -187,7 +198,7 @@ Devvit.addSettings([
         onValidate: ({ value }) => {
             return validateSetting('errorReportSubredditName', value);
         }
-    }
+    },
 ]);
 
 Devvit.addTrigger({
@@ -233,6 +244,10 @@ Devvit.addTrigger({
             const settings = await getAllSettings(context);
 
             if (isIgnoredUser(event.author.name, settings)) {
+                return;
+            }
+
+            if (event.post.linkFlair && isIgnoredFlair(event.post.linkFlair.templateId, settings)) {
                 return;
             }
 

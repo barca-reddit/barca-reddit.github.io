@@ -99,7 +99,7 @@ export function getTierFlairId(tier: DevvitSource['tier'], settings: DevvitSetti
         case '3': return settings.flairTier3Id;
         case '4': return settings.flairTier4Id;
         case '5': return settings.flairTier5Id;
-        default: return null;
+        default: return undefined;
     }
 }
 
@@ -110,8 +110,20 @@ export function sortTiers(a: DevvitSource, b: DevvitSource) {
 /**
  * Devvit onValidate is a bit weird, if you return string it assumes an error,
  * if you return undefined it assumes success, so here we return accordingly.
+ * 
+ * Additionally, Reddit will always pass a default value for each settings,
+ * even if no defaultValue is set. As such, if an empty string is passed
+ * and the setting is optional, we allow it to pass validation.
+ * 
+ * number: 0
+ * string: ''
+ * boolean: false
  */
 export function validateSetting(key: keyof DevvitSettings, value: unknown) {
+    if (typeof value === 'string' && value === '' && devvitSettings.shape[key].isOptional()) {
+        return undefined;
+    }
+
     const parsed = devvitSettings.shape[key].safeParse(value);
 
     return parsed.success
@@ -124,8 +136,11 @@ export async function getAllSettings(context: Context | TriggerContext) {
 }
 
 export function isIgnoredUser(username: string, settings: DevvitSettings) {
-    return settings.ignoredUsers
-        .some(ignoredUser => ignoredUser.toLowerCase() === username.toLowerCase());
+    return settings.ignoredUsers?.some(ignoredUser => ignoredUser.toLowerCase() === username.toLowerCase());
+}
+
+export function isIgnoredFlair(flairTemplateId: string, settings: DevvitSettings) {
+    return settings.ignoredFlairs?.some(ignoredFlair => ignoredFlair.toLowerCase() === flairTemplateId.toLowerCase());
 }
 
 /**

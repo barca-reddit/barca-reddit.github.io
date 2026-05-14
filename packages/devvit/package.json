@@ -15,7 +15,7 @@
         "@devvit/protos": "^0.12.0",
         "@repo/schemas": "workspace:*",
         "@types/linkify-it": "^5.0.0",
-        "devvit": "^0.12.0",
+        "devvit": "^0.12.23",
         "vitest": "^3.2.4"
     }
 }
