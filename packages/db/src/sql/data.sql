@@ -114,7 +114,7 @@ VALUES
 ('f7511a79-5e0a-434a-9897-25d9b351546a', 'infosfcb', 0, 'aggregator', 'aggregator', NULL, '[{"handle":"infosfcb","platform":"x"}]', NULL, NULL, 0),
 ('795f68cc-c7ff-40f8-be62-609109202bf5', 'LaSenyera', 0, 'aggregator', 'aggregator', NULL, '[{"handle":"LaSenyera","platform":"x"}]', NULL, NULL, 0),
 ('556a7625-f89c-46b2-a53b-cacc1ee2e97c', 'Reshad Rahman', 0, 'aggregator', 'aggregator', NULL, '[{"handle":"ReshadFCB","platform":"x"}]', NULL, NULL, 0),
-('fd21476f-a620-4d1d-9a28-e3bed20c9e7b', 'Carlos Monfort', 0, 'journalist', '1', '["SPORT"]', '[{"handle":"monfortcarlos","platform":"x"}]', NULL, NULL, 0),
+('fd21476f-a620-4d1d-9a28-e3bed20c9e7b', 'Carlos Monfort', 0, 'journalist', '1', '["Sport"]', '[{"handle":"monfortcarlos","platform":"x"}]', NULL, NULL, 0),
 ('44be2e95-29db-4aa2-96d0-53b359ec3f46', 'Sofiane', 0, 'journalist', '2', NULL, '[{"handle":"Soso9zb","platform":"x"}]', NULL, NULL, 0),
 ('16fdb485-9d82-4466-82ec-4fe7093dc1c6', 'ForcaBarca AR', 0, 'aggregator', 'aggregator', NULL, '[{"handle":"forcabarca_ar","platform":"x"}]', NULL, NULL, 0)
 ON CONFLICT (id)
