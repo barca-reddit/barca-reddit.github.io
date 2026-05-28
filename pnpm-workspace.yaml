@@ -1,2 +1,22 @@
 packages:
-    - 'packages/*'
+  - 'packages/*'
+
+preferWorkspacePackages: true
+linkWorkspacePackages: deep
+saveWorkspaceProtocol: false
+
+# Use node-linker hoisted to mimic npm and fix devvit typescript errors
+# https://pnpm.io/npmrc#node-linker
+nodeLinker: hoisted
+
+updateConfig:
+  ignoreDependencies:
+    - tailwindcss
+    - zod
+    - zod-validation-error
+
+allowBuilds:
+  esbuild: false
+  protobufjs: false
+  sharp: false
+  workerd: false
