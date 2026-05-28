@@ -2,6 +2,8 @@
     "name": "media-reliability-v2",
     "version": "1.0.0",
     "description": "",
+    "license": "MIT",
+    "author": "decho",
     "scripts": {
         "check": "pnpm --stream --parallel --recursive check",
         "lint": "pnpm --stream --parallel --recursive lint",
@@ -10,21 +12,10 @@
         "gh-pages": "pnpm --filter @repo/site run build",
         "update": "pnpm up --latest --interactive --recursive"
     },
-    "author": "decho",
-    "license": "MIT",
     "devDependencies": {
         "@virtuallyunknown/eslint-config": "^0.4.1",
         "@virtuallyunknown/tsconfig": "^0.4.1",
         "eslint": "^9.33.0",
         "typescript": "^5.9.2"
-    },
-    "pnpm": {
-        "updateConfig": {
-            "ignoreDependencies": [
-                "tailwindcss",
-                "zod",
-                "zod-validation-error"
-            ]
-        }
     }
 }
